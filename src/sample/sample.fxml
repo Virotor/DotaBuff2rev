@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="960.0" AnchorPane.bottomAnchor="499.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="960.0">
+               <children>
+                  <Button focusTraversable="false" onAction="#chooseMatch" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Статистика матчей" HBox.hgrow="ALWAYS">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Button>
+                  <Button disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Герои">
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="1.0" prefHeight="500.0" prefWidth="960.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="42.0">
+         <content>
+            <GridPane alignment="TOP_CENTER" layoutX="2.0" layoutY="4.0" prefHeight="699.0" prefWidth="940.0">
+              <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="105.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="59.0" prefHeight="59.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                      <image>
+                          <Image url="@../HeroesIcon/drow.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                      <image>
+                          <Image url="@../HeroesIcon/jakiro.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                      <image>
+                          <Image url="@../HeroesIcon/morphling.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                      <image>
+                          <Image url="@../HeroesIcon/warlock.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                      <image>
+                          <Image url="@../HeroesIcon/kunkka.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                      <image>
+                          <Image url="@../HeroesIcon/clockwerk.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                      <image>
+                          <Image url="@../HeroesIcon/lycan.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                      <image>
+                          <Image url="@../HeroesIcon/earth.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                      <image>
+                          <Image url="@../HeroesIcon/lich.png" />
+                      </image>
+                   </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                           <Image url="@../HeroesIcon/alchemist.png" />
+                     </image>
+                  </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="10">
+                      <image>
+                          <Image url="@../HeroesIcon/terrorblade.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="9">
+                      <image>
+                          <Image url="@../HeroesIcon/slardar.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                      <image>
+                          <Image url="@../HeroesIcon/gyrocopter.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                      <image>
+                          <Image url="@../HeroesIcon/lina.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                      <image>
+                          <Image url="@../HeroesIcon/lifestealer.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                      <image>
+                          <Image url="@../HeroesIcon/natures.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                      <image>
+                          <Image url="@../HeroesIcon/monkey.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="11">
+                      <image>
+                          <Image url="@../HeroesIcon/treant.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                      <image>
+                          <Image url="@../HeroesIcon/ogre.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                      <image>
+                          <Image url="@../HeroesIcon/io.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                      <image>
+                          <Image url="@../HeroesIcon/ember.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                      <image>
+                          <Image url="@../HeroesIcon/juggernaut.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                      <image>
+                          <Image url="@../HeroesIcon/leshrac.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="9">
+                      <image>
+                          <Image url="@../HeroesIcon/shadow-fiend.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                      <image>
+                          <Image url="@../HeroesIcon/outworld.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                      <image>
+                          <Image url="@../HeroesIcon/pangolier.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                      <image>
+                          <Image url="@../HeroesIcon/legion.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="10">
+                      <image>
+                          <Image url="@../HeroesIcon/tidehunter.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="11">
+                      <image>
+                          <Image url="@../HeroesIcon/viper.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                      <image>
+                          <Image url="@../HeroesIcon/disruptor.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                      <image>
+                          <Image url="@../HeroesIcon/queen.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                      <image>
+                          <Image url="@../HeroesIcon/centaur.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                      <image>
+                          <Image url="@../HeroesIcon/elder.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <image>
+                              <Image url="@../HeroesIcon/bristleback.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                      <image>
+                          <Image url="@../HeroesIcon/huskar.png" />
+                      </image>
+                   </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                     <image>
+                           <Image url="@../HeroesIcon/ancient.png" />
+                     </image>
+                  </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="9">
+                      <image>
+                          <Image url="@../HeroesIcon/sniper.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="11">
+                      <image>
+                          <Image url="@../HeroesIcon/undying.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="8">
+                      <image>
+                          <Image url="@../HeroesIcon/puck.jpg" />
+                      </image>
+                   </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                           <Image url="@../HeroesIcon/abaddon.png" />
+                     </image>
+                  </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="10">
+                      <image>
+                          <Image url="@../HeroesIcon/storm.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="10">
+                      <image>
+                          <Image url="@../HeroesIcon/timbersaw.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="11">
+                      <image>
+                          <Image url="@../HeroesIcon/vengeful.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                      <image>
+                          <Image url="@../HeroesIcon/oracle.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="12">
+                      <image>
+                          <Image url="@../HeroesIcon/weaver.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                      <image>
+                          <Image url="@../HeroesIcon/invoker.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                      <image>
+                          <Image url="@../HeroesIcon/chen.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="12">
+                      <image>
+                          <Image url="@../HeroesIcon/wraith.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                      <image>
+                          <Image url="@../HeroesIcon/templar.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                      <image>
+                          <Image url="@../HeroesIcon/doom.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="11">
+                      <image>
+                          <Image url="@../HeroesIcon/tusk.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                      <image>
+                          <Image url="@../HeroesIcon/necrophos.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="11">
+                      <image>
+                          <Image url="@../HeroesIcon/underlord.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                      <image>
+                          <Image url="@../HeroesIcon/chaos.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                      <image>
+                          <Image url="@../HeroesIcon/luna.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                      <image>
+                          <Image url="@../HeroesIcon/troll.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="0">
+                      <image>
+                          <Image url="@../HeroesIcon/beastmaster.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="9">
+                      <image>
+                          <Image url="@../HeroesIcon/slark.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="0">
+                      <image>
+                          <Image url="@../HeroesIcon/batrider.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                      <image>
+                          <Image url="@../HeroesIcon/silencer.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                      <image>
+                          <Image url="@../HeroesIcon/night.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                      <image>
+                          <Image url="@../HeroesIcon/omniknight.png" />
+                      </image>
+                   </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+                     <image>
+                           <Image url="@../HeroesIcon/arc.png" />
+                     </image>
+                  </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                      <image>
+                          <Image url="@../HeroesIcon/faceless.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                      <image>
+                          <Image url="@../HeroesIcon/meepo.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                      <image>
+                          <Image url="@../HeroesIcon/shadow-shaman.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="12">
+                      <image>
+                          <Image url="@../HeroesIcon/witch.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="8">
+                      <image>
+                          <Image url="@../HeroesIcon/rubick.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="10">
+                      <image>
+                          <Image url="@../HeroesIcon/tiny.jpg" />
+                      </image>
+                   </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                     <image>
+                           <Image url="@../HeroesIcon/anti.png" />
+                     </image>
+                  </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                      <image>
+                          <Image url="@../HeroesIcon/grimstroke.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6">
+                      <image>
+                              <Image url="@../HeroesIcon/bane.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                      <image>
+                          <Image url="@../HeroesIcon/clinkz.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                      <image>
+                          <Image url="@../HeroesIcon/razor.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                      <image>
+                          <Image url="@../HeroesIcon/techies.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                      <image>
+                          <Image url="@../HeroesIcon/dragon.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="12">
+                      <image>
+                          <Image url="@../HeroesIcon/winter.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                      <image>
+                          <Image url="@../HeroesIcon/sven.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="10">
+                      <image>
+                          <Image url="@../HeroesIcon/tinker.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="9">
+                      <image>
+                          <Image url="@../HeroesIcon/spectre.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="11">
+                      <image>
+                          <Image url="@../HeroesIcon/venomancer.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="12">
+                      <image>
+                          <Image url="@../HeroesIcon/visage.jpg" />
+                      </image>
+                   </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
+                     <image>
+                           <Image url="@../HeroesIcon/axe.png" />
+                     </image>
+                  </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                      <image>
+                          <Image url="@../HeroesIcon/death.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                      <image>
+                          <Image url="@../HeroesIcon/enchantress.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                      <image>
+                          <Image url="@../HeroesIcon/dark-seer.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                      <image>
+                          <Image url="@../HeroesIcon/enigma.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="12">
+                      <image>
+                          <Image url="@../HeroesIcon/windranger.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                      <image>
+                          <Image url="@../HeroesIcon/phantom-lancer.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="7">
+                      <image>
+                          <Image url="@../HeroesIcon/phantom-assassin.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                      <image>
+                          <Image url="@../HeroesIcon/pugna.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="12">
+                      <image>
+                          <Image url="@../HeroesIcon/zeus.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <image>
+                              <Image url="@../HeroesIcon/broodmother.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                      <image>
+                          <Image url="@../HeroesIcon/mirana.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                      <image>
+                          <Image url="@../HeroesIcon/lion.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                      <image>
+                          <Image url="@../HeroesIcon/pudge.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                      <image>
+                          <Image url="@../HeroesIcon/lone.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="7">
+                      <image>
+                          <Image url="@../HeroesIcon/phoenix.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                      <image>
+                          <Image url="@../HeroesIcon/skywrath.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                      <image>
+                          <Image url="@../HeroesIcon/keeper.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                      <image>
+                          <Image url="@../HeroesIcon/naga.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                      <image>
+                          <Image url="@../HeroesIcon/blood.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="190.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                      <image>
+                          <Image url="@../HeroesIcon/crystal.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                      <image>
+                          <Image url="@../HeroesIcon/nyx.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                      <image>
+                          <Image url="@../HeroesIcon/medusa.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="70.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <image>
+                          <Image url="@../HeroesIcon/bounty.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                      <image>
+                          <Image url="@../HeroesIcon/riki.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="250.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <image>
+                          <Image url="@../HeroesIcon/brewmaster.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                      <image>
+                          <Image url="@../HeroesIcon/dark-willow.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="530.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="11">
+                      <image>
+                          <Image url="@../HeroesIcon/ursa.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="8">
+                      <image>
+                          <Image url="@../HeroesIcon/shadow-demon.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="9">
+                      <image>
+                          <Image url="@../HeroesIcon/spirit.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="491.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                      <image>
+                          <Image url="@../HeroesIcon/earthshaker.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                      <image>
+                          <Image url="@../HeroesIcon/magnus.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                      <image>
+                          <Image url="@../HeroesIcon/dazzle.png" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="8">
+                      <image>
+                          <Image url="@../HeroesIcon/sand.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="60.0" fitWidth="105.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="12">
+                      <image>
+                          <Image url="@../HeroesIcon/mars.png" />
+                      </image>
+                   </ImageView>
+                   <Button fx:id="bristleback" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroBristleback" opacity="0.0" prefHeight="60.0" prefWidth="105.0" text="bristleback" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="abaddon" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroAbaddon" opacity="0.0" prefHeight="59.0" prefWidth="105.0" text="abaddon" />
+                   <Button fx:id="axe" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroAxe" opacity="0.0" prefHeight="60.0" prefWidth="105.0" text="axe" GridPane.columnIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="arc" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroArc" opacity="0.0" prefHeight="60.0" prefWidth="105.0" text="arc" GridPane.columnIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="anti" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroAnti" opacity="0.0" prefHeight="60.0" prefWidth="105.0" text="anti" GridPane.columnIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="alchemist" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroAlchemist" opacity="0.0" prefHeight="60.0" prefWidth="105.0" text="alchemist" GridPane.columnIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="ancient" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroAncient" opacity="0.0" prefHeight="60.0" prefWidth="105.0" text="ancient" GridPane.columnIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="bane" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroBane" opacity="0.0" prefHeight="60.0" prefWidth="105.0" text="bane" GridPane.columnIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="batrider" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroBatrider" opacity="0.0" prefHeight="60.0" prefWidth="105.0" text="batrider" GridPane.columnIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="beastmaster" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroBeastmaster" opacity="0.0" prefHeight="60.0" prefWidth="105.0" text="beastmaster" GridPane.columnIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="blood" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroBlood" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="blood" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="bounty" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroBounty" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="bounty" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="brewmaster" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroBrewmaster" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="Brewmaster" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="broodmather" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroBroodmother" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="broodmathe" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="centaur" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroCentaur" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="centaur" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="chaos" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroChaos" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="chaos" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="chen" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroChen" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="chen" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="crystal" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroCrystal" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="crystal" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="dark_seer" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroDark_seer" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="dark-seer" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="death" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroDeath" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="death" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="disruptor" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroDisruptor" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="disruptor" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="clinkz" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroClinkz" opacity="0.0" prefHeight="52.0" prefWidth="101.0" text="clinkz" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="clockwerk" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroClockwerk" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="clockwerk" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="dark_willow" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroDark_willow" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="dark-willow" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="dazzle" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroDazzle" opacity="0.0" prefHeight="57.0" prefWidth="104.0" text="dazzle" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="doom" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroDoom" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="doom" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="dragon" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroDragon" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="dragon" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="drow" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroDrow" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="drow" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="earth" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroEarth" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="earth" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="earthshaker" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroEarthshaker" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="earthshaker" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="elder" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroElder" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="elder" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="ember" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroEmder" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="ember" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="enchantres" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroEnchantres" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="enchantress" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="enigma" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroEnigma" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="enigma" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="faceless" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroFaceless" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="faceless" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="grimstroke" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroGrimstroke" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="grimstroke" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="gyrocopter" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroGyrocopter" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="gyrocopter" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="huskar" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroHuskar" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="huskar" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="invoker" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroInvoker" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="invoker" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="io" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroIo" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="io" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="jakiro" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroJakiro" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="jakiro" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="jaggernaut" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroJaggernaut" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="juggernaut" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="keeper" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroKeeper" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="kepper" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroKunkka" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="kunka" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="legion" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroLegion" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="legion" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="leshrac" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroLeshrac" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="leshrac" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="lich" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroLich" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="lich" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="lifestealer" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroLifestealer" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="lifestealer" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="lina" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroLina" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="lina" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="lion" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroLion" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="lion" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="lone" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroLone" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="lone" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="luna" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroLuna" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="luna" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="lycan" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroLycan" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="lycan" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="magnus" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroMagnus" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="magnus" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="medusa" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroMedusa" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="medusa" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="meepo" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroMeepo" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="meepo" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="mirana" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroMirana" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="mirana" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="monkey" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroMonkey" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="monkey" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="morphling" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroMorphling" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="morphling" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="naga" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroNaga" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="naga" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="natures" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroNatures" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="natures" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="necrophos" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroNecrophos" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="necrophos" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="night" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroNight" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="night" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="nyx" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroNyx" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="nyx" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="ogre" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroOgre" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="ogre" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="omniknight" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroOmniknight" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="omniknight" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="oracle" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroOracle" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="oracle" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="outword" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroOutword" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="outword" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="pangolier" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroPangolier" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="pangolier" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="phantom_assassin" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroPhantom_assassin" opacity="0.0" prefHeight="63.0" prefWidth="116.0" text="phantom-assassin" GridPane.columnIndex="6" GridPane.rowIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="phantom_lancer" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroPhantom_lancer" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="phantom-lancer" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="phoenix" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroPhoenix" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="phoenix" GridPane.columnIndex="8" GridPane.rowIndex="7">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="puck" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroPuck" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="puck" GridPane.columnIndex="0" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="pudge" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroPudge" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="pudge" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="pugna" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroPugna" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="pugna" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="queen" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroQueen" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="queen" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="razor" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroRazor" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="razor" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="riki" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroRiki" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="riki" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="rubick" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroRubick" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="rubick" GridPane.columnIndex="6" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="sand" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSand" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="sand" GridPane.columnIndex="7" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="swadow_fiend" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSwadow_fiend" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="shadow-fiend" GridPane.columnIndex="0" GridPane.rowIndex="9">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="swadow_demon" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSwadow_demon" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="shadow-demon" GridPane.columnIndex="8" GridPane.rowIndex="8">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="swadow_shaman" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSwadow_shaman" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="shadow-shaman" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="silencer" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSilencer" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="silencer" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="slardar" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSlardar" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="slardar" GridPane.columnIndex="4" GridPane.rowIndex="9">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="slark" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSlark" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="slark" GridPane.columnIndex="5" GridPane.rowIndex="9">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="skywrath" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSkywrath" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="skywrath" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="sniper" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHerosniper" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="sniper" GridPane.columnIndex="6" GridPane.rowIndex="9">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="spectre" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSpectre" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="spectre" GridPane.columnIndex="7" GridPane.rowIndex="9">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="spirit" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSpirit" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="spirit" GridPane.columnIndex="8" GridPane.rowIndex="9">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="techies" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTechies" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="techies" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="templar" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTemplar" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="templar" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="terrorblad" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTerrorblade" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="terrorblad" GridPane.columnIndex="4" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="tidehunter" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTidehunter" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="tidehunter" GridPane.columnIndex="5" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="storm" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroStorm" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="storm" GridPane.columnIndex="0" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="sven" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroSven" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="sven" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="timbersaw" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTimbersaw" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="timbersaw" GridPane.columnIndex="6" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="tinker" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTinker" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="tinker" GridPane.columnIndex="7" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="tiny" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTiny" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="tiny" GridPane.columnIndex="8" GridPane.rowIndex="10">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="treant" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTreant" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="treant" GridPane.columnIndex="0" GridPane.rowIndex="11">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="troll" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTroll" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="troll" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="tusk" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroTusk" opacity="0.0" prefHeight="56.0" prefWidth="120.0" text="tusk" GridPane.columnIndex="2" GridPane.rowIndex="11">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="underlord" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroUnderlord" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="underlord" GridPane.columnIndex="3" GridPane.rowIndex="11">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="undying" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroUndying" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="undying" GridPane.columnIndex="4" GridPane.rowIndex="11">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="ursa" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroUrsa" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="ursa" GridPane.columnIndex="5" GridPane.rowIndex="11">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="vengerful" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroVengerful" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="vengerful" GridPane.columnIndex="6" GridPane.rowIndex="11">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="venomancer" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroVenomancer" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="venomancer" GridPane.columnIndex="7" GridPane.rowIndex="11">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="viper" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroViper" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="viper" GridPane.columnIndex="8" GridPane.rowIndex="11">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="mars" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroMars" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="mars" GridPane.columnIndex="8" GridPane.rowIndex="12">
+                       <cursor>
+                           <Cursor fx:constant="DISAPPEAR" />
+                       </cursor></Button>
+                   <Button fx:id="wraith" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroWraith" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="wraith" GridPane.columnIndex="6" GridPane.rowIndex="12">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="zeus" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroZeus" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="zeus" GridPane.columnIndex="7" GridPane.rowIndex="12">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="visage" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroVisage" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="visage" GridPane.rowIndex="12">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="warlock" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroWarlock" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="warlock" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="weaver" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroWeaver" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="weaver" GridPane.columnIndex="2" GridPane.rowIndex="12">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="windranger" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroWindranger" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="windranger" GridPane.columnIndex="3" GridPane.rowIndex="12">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="winter" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroWinter" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="winter" GridPane.columnIndex="4" GridPane.rowIndex="12">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+                   <Button fx:id="witch" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickOnHeroWitch" opacity="0.0" prefHeight="55.0" prefWidth="101.0" text="witch" GridPane.columnIndex="5" GridPane.rowIndex="12">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor></Button>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

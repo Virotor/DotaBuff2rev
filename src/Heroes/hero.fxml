@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0"
+            prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Heroes.ControllerHero">
+   <Accordion layoutX="591.0" layoutY="70.0" prefHeight="714.0" prefWidth="370.0" AnchorPane.bottomAnchor="10.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+      <panes>
+         <TitledPane animated="false" prefHeight="295.0" prefWidth="370.0" text="О герое">
+            <ScrollPane fx:id="scrollPane" prefHeight="370.0" prefWidth="360.0">
+               <StackPane fx:id="paneScore" layoutX="8.5498046875" layoutY="10.0">
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" top="10.0"/>
+                  </padding>
+                  <children>
+                     <Text fx:id="textTable" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                           wrappingWidth="340.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0"
+                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0"/>
+                  </children>
+               </StackPane>
+            </ScrollPane>
+         </TitledPane>
+         <TitledPane fx:id="firstSkillText" animated="false" text=" Mist Coil">
+            <graphic>
+               <ImageView fx:id="imageFirstSkill" fitHeight="30.0" fitWidth="30.0" nodeOrientation="INHERIT"
+                          pickOnBounds="true" preserveRatio="true">
+               </ImageView>
+            </graphic>
+            <ScrollPane prefViewportHeight="381.0" prefViewportWidth="368.0">
+               <StackPane>
+                  <Text fx:id="firstSkill" strokeType="OUTSIDE" strokeWidth="0.0"
+                        wrappingWidth="352.6708984375">
+                     <StackPane.margin>
+                        <Insets left="10.0"/>
+                     </StackPane.margin>
+                  </Text>
+               </StackPane>
+            </ScrollPane>
+         </TitledPane>
+         <TitledPane fx:id="secondSkillText" animated="false" prefHeight="278.0" prefWidth="358.0"
+                     text="Aphotic Shield">
+            <graphic>
+               <ImageView fx:id="imageSecondSkill" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                          preserveRatio="true">
+               </ImageView>
+            </graphic>
+            <ScrollPane prefViewportHeight="381.0" prefViewportWidth="368.0">
+               <StackPane>
+                  <Text fx:id="secondSkill" strokeType="OUTSIDE" strokeWidth="0.0"
+                        wrappingWidth="348.6708984375">
+                     <StackPane.margin>
+                        <Insets left="10.0"/>
+                     </StackPane.margin>
+                  </Text>
+               </StackPane>
+            </ScrollPane>
+         </TitledPane>
+         <TitledPane fx:id="thirdSkillText" animated="false" text=" Curse of Averno">
+            <graphic>
+               <ImageView fx:id="imageThirdSkill" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                          preserveRatio="true">
+            </ImageView>
+            </graphic>
+            <content>
+               <ScrollPane prefViewportHeight="381.0" prefViewportWidth="368.0">
+                  <content>
+                     <StackPane>
+                        <children>
+                           <Text fx:id="thirdSkill" strokeType="OUTSIDE" strokeWidth="0.0"
+                                 text="sdgsdgsd&#10;gsdgsd&#10;gsdg&#10;dsgsdg&#10;sdg&#10;sdgsd&#10;gsd&#10;gsd&#10;g&#10;sdg&#10;sd&#10;g&#10;sdg&#10;sd&#10;gsd&#10;g&#10;s&#10;g&#10;dgfd&#10;gdf&#10;gdfg&#10;dfgdf&#10;g&#10;dfgdf&#10;g&#10;dfg&#10;df&#10;g&#10;df&#10;gdfg&#10;dfg"
+                                 wrappingWidth="349.6708984375">
+                              <StackPane.margin>
+                                 <Insets left="10.0"/>
+                              </StackPane.margin>
+                           </Text>
+                        </children>
+                     </StackPane>
+                  </content>
+               </ScrollPane>
+            </content>
+         </TitledPane>
+         <TitledPane fx:id="ultimateName" animated="false" text="Borrowed Time">
+            <graphic>
+               <ImageView fx:id="ultimateImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                          preserveRatio="true">
+            </ImageView>
+            </graphic>
+            <content>
+               <ScrollPane prefViewportHeight="381.0" prefViewportWidth="368.0">
+                  <content>
+                     <StackPane>
+                        <children>
+                           <Text fx:id="ultimateSkill" strokeType="OUTSIDE" strokeWidth="0.0"
+                                 wrappingWidth="344.6708984375">
+                              <StackPane.margin>
+                                 <Insets left="10.0"/>
+                              </StackPane.margin>
+                           </Text>
+                        </children>
+                     </StackPane>
+                  </content>
+               </ScrollPane>
+            </content>
+         </TitledPane>
+         <TitledPane animated="false" text="Talents">
+            <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="163.0" prefWidth="368.0">
+                  <children>
+                     <ImageView fx:id="imageT" fitHeight="234.0" fitWidth="370.0" layoutX="-1.0" pickOnBounds="true"
+                                preserveRatio="true">
+                     </ImageView>
+                  </children>
+               </AnchorPane>
+            </content>
+         </TitledPane>
+      </panes>
+   </Accordion>
+   <HBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="960.0" AnchorPane.bottomAnchor="500.0"
+         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <Button focusTraversable="false" mnemonicParsing="false" onAction="#chooseMatch" prefHeight="50.0"
+                 prefWidth="150.0" text="Статистика матчей">
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND"/>
+            </cursor>
+            <effect>
+               <Blend/>
+            </effect>
+         </Button>
+         <Button focusTraversable="false" mnemonicParsing="false" onAction="#chooseHero" prefHeight="50.0"
+                 prefWidth="150.0" text="Герои">
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND"/>
+            </cursor>
+            <effect>
+               <Blend/>
+            </effect>
+         </Button>
+      </children>
+   </HBox>
+   <ImageView fx:id="imageM" fitHeight="460.0" fitWidth="580.0" layoutX="14.0" layoutY="70.0"
+              AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="369.0"
+              AnchorPane.topAnchor="70.0">
+      <viewport>
+         <Rectangle2D/>
+      </viewport>
+   </ImageView>
+</AnchorPane>
