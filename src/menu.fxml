@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu">
+    <children>
+     <SubScene fx:id="subScene" height="277.0" layoutX="62.0" layoutY="229.0" opacity="0.66" width="839.0">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+        <ImageView fitHeight="641.0" fitWidth="1106.0" layoutX="-1.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-60.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.68701171875" AnchorPane.topAnchor="-40.0">
+            <image>
+                <Image url="@HeroesIcon/Dota.jpeg" />
+            </image>
+        </ImageView>
+        <TextField fx:id="idPlayer" layoutX="701.0" layoutY="386.0" prefHeight="30.0" prefWidth="240.0" promptText="id игрока" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="700.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="385.0" />
+        <Button fx:id="dfs" layoutX="781.0" layoutY="417.0" mnemonicParsing="false" onAction="#goMatch" text="Go" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="780.0" AnchorPane.topAnchor="420.0" />
+      <Button fx:id="dfs1" layoutX="780.0" layoutY="420.0" mnemonicParsing="false" onAction="#goPlayer" text="Go" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="780.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="420.0" />
+      <TextField fx:id="idMatch" layoutX="63.0" layoutY="386.0" prefHeight="30.0" prefWidth="240.0" promptText="id матча" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="385.0" />
+    </children>
+</AnchorPane>
