@@ -4,8 +4,6 @@ public class PlayerStatistics implements Serializable {
     private String nickName;
     private Double win;
     private Double lose;
-    private Double GPM;
-    private Double XPM;
     private Double winrate;
     private MatchesPlayed[] matchesPlayeds;
 
@@ -33,21 +31,6 @@ public class PlayerStatistics implements Serializable {
         this.lose = lose;
     }
 
-    public Double getGPM() {
-        return GPM;
-    }
-
-    public void setGPM(Double GPM) {
-        this.GPM = GPM;
-    }
-
-    public Double getXPM() {
-        return XPM;
-    }
-
-    public void setXPM(Double XPM) {
-        this.XPM = XPM;
-    }
 
     public Double getWinrate() {
         return winrate;

@@ -1,39 +1,60 @@
 import javafx.application.Application;
+import javafx.event.EventHandler;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
+import java.nio.file.Paths;
 
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //Menu menu = new Menu();
-        Menu.goMenu(primaryStage);
-        //Controller.heroMenu(primaryStage);
-        //Controller.heroMenu(primaryStage);
-        //PlayerStatistics player=
-        // PlayerStatistics playerStatistics= Client.main();
-        //Help.HeroId hero= Help.HeroId.valueOf("h1");
-        //System.out.println(hero);
-        //PlayerStatistics playerStatistics=new PlayerStatistics();
-        // MatchesPlayed[] l = new MatchesPlayed[26];
-        /*for(int i =0;i<25;i++){
-            l[i].setAssists(12);
-            l[i].setDeaths(26);
-            l[i].setRadiantWin(true);
-            l[i].setDuration(12);
-            l[i].setHeroId(i+25);
-            l[i].setMatchID((long)89);
-            l[i].setKills(43545);
-            l[i].setLobbyType(453);
-        }*/
-        // playerStatistics.setMatchesPlayeds(l);
-        //ControllerMatches.setListMatches(listMatches);
-        //PlayerStatistics playerStatistics = new PlayerStatistics("Beach", 200.0, 300.0, 400.0, 500.0, 600.0);
-        // ControllerMatches.setPlayer(playerStatistics);
-        //ControllerMatches.setPlayer(playerStatistics);
-        //ControllerMatches con = new ControllerMatches();
-        //con.show(new Stage());
-        //Controller.heroMenu(primaryStage);
+   /*     primaryStage.setTitle("Title");
+        AnchorPane rootPane = new AnchorPane();
+        Scene myScene = new Scene(rootPane, 600, 300);
+        primaryStage.setScene(myScene);
+        Popup popper = new Popup();
+        popper.setWidth(200);
+        popper.setHeight(300);
+        Button BUTp = new Button("кнопка");
+        TextField tf1 = new TextField();
+        TextField tf2 = new TextField();
+
+        BUTp.addEventHandler(MouseEvent.MOUSE_CLICKED,
+                new EventHandler<MouseEvent>() {
+                    public void handle(MouseEvent e) {
+                        popper.show(primaryStage);
+                        popper.setAutoHide(true);
+                        popper.setX(350);
+                        popper.setY(200);
+                        tf1.setLayoutY(4);
+                        tf2.setLayoutY(90);
+//tf1.setLayoutX(4);
+//tf2.setLayoutX(3);
+                        popper.getContent().addAll(tf1, tf2);
+                    }
+                });
+
+        AnchorPane.setRightAnchor(BUTp, 100.0);
+        AnchorPane.setTopAnchor(BUTp, 5.0);
+
+        rootPane.getChildren().addAll(BUTp);
+        primaryStage.show();*/
+
+       Menu menu = new Menu();
+       menu.goMenu(primaryStage);/*
+       ControllerMatches cm = new ControllerMatches();
+       cm.show(primaryStage);
+        /*NickName nickName = new NickName();
+        nickName.show(primaryStage,Client.searchResponseByName("Sesta Espada"));*/
     }
 
 

@@ -7,9 +7,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.TitledPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 
 import java.io.File;
 import java.io.FileReader;
@@ -20,51 +20,19 @@ import java.util.Scanner;
 
 public class ControllerHero {
 
-    /* @FXML
-     private ScrollPane scrollPane;
-     @FXML
-     private StackPane paneScore;
-     @FXML
-     private Text firstSkill;
-     @FXML
-     private Text secondSkill;
-     @FXML
-     private Text thirdSkill;
-     @FXML
-     private Text ultimateSkill;
-     @FXML
-     private ImageView imageM;
-     @FXML
-     private ImageView imageT;
-     @FXML
-     private TitledPane firstSkillText;
-     @FXML
-     private ImageView imageFirstSkill;
-     @FXML
-     private TitledPane secondSkillText;
-     @FXML
-     private ImageView imageSecondSkill;
-     @FXML
-     private TitledPane thirdSkillText;
-     @FXML
-     private ImageView imageThirdSkill;
-     @FXML
-     private TitledPane ultimateName;
-     @FXML
-     private ImageView ultimateImage;
-     @FXML
-     private Text textTable;*/
     private ArrayList<StringBuilder> listText;
 
     static private Stage scene;
 
     private String nameHero;
 
-    public ControllerHero() {
-        nameHero = "";
-    }
+    private boolean isPrePlayerStatistics;
 
-    public void ReadFile(String name) throws IOException {
+    static private  PlayerMatchStatistics[] playerMatchStatistics;
+    static private  DataForGraphs dataForGraphs;
+
+
+    public void ReadFile(String name) {
         try {
             nameHero = name;
             int j = 0;
@@ -121,8 +89,8 @@ public class ControllerHero {
         skillName3.setText(listText.get(2).toString());
         TitledPane skillName4 = (TitledPane) namespace.get("ultimateName");
         skillName4.setText(listText.get(3).toString());
-        ArrayList<ImageView> listImageView =new  ArrayList<>();
-        ArrayList<String> listNameView= new ArrayList<>();
+        ArrayList<ImageView> listImageView = new ArrayList<>();
+        ArrayList<String> listNameView = new ArrayList<>();
         listImageView.add((ImageView) namespace.get("imageM"));
         listImageView.add((ImageView) namespace.get("imageT"));
         listImageView.add((ImageView) namespace.get("imageFirstSkill"));
@@ -135,31 +103,52 @@ public class ControllerHero {
         listNameView.add("Hero/" + this.nameHero + "/skill2.png");
         listNameView.add("Hero/" + this.nameHero + "/skill3.png");
         listNameView.add("Hero/" + this.nameHero + "/ultimate.png");
-        for(int i =0;i<6;i++){
+        for (int i = 0; i < 6; i++) {
             File file = new File(listNameView.get(i));
             Image im = new Image(file.toURI().toString());
             listImageView.get(i).setImage(im);
-            file.exists();
+            //listImageView.get(i).fitHeightProperty().bind(primaryStage.heightProperty());
+            //listImageView.get(i).fitWidthProperty().set(primaryStage.widthProperty().asObject().getValue());
         }
+        AnchorPane anchorPane = (AnchorPane) namespace.get("ImagePane");
+        listImageView.get(0).fitWidthProperty().bind(anchorPane.widthProperty());
+        listImageView.get(0).fitHeightProperty().bind(anchorPane.heightProperty());
         scene = primaryStage;
         scene.setTitle("DotaBuff");
         scene.setScene(new Scene(root, 960, 540));
         scene.show();
     }
 
-    public void chooseMatch(ActionEvent actionEvent) throws IOException {
-        ControllerMatches cm = new ControllerMatches();
-        cm.show(new Stage());
-        scene.close();
+    public void goBack() throws IOException {
+        switch (ModelCancel.getCodeOfOperation().pop()) {
+            case 1: {
+                Menu menu = new Menu();
+                menu.goMenu(scene);
+                break;
+            }
+            case 2: {
+                ControllerMatches controllerMatches = new ControllerMatches();
+                controllerMatches.show(scene);
+                break;
+            }
+            case 3:{
+                ControllerMatch controllerMatch = new ControllerMatch();
+                controllerMatch.show(scene,ModelCancel.getPlayerMatchStatisticsStack().pop(),ModelCancel.getDataForGraphsStack().pop());
+                break;
+            }
+        }
     }
 
-    public void chooseHero(ActionEvent actionEvent) throws IOException {
-        Stage primaryStage = new Stage();
-        Controller.heroMenu(primaryStage);
-        scene.close();
+    public void setPrePlayerStatistics(boolean prePlayerStatistics) {
+        isPrePlayerStatistics = prePlayerStatistics;
     }
 
-    public void chooseItem(ActionEvent actionEvent) {
+    public void setPlayerMatchStatistics(PlayerMatchStatistics[] playerMatchStatistics) {
+        this.playerMatchStatistics = playerMatchStatistics;
+    }
+
+    public void setDataForGraphs(DataForGraphs dataForGraphs) {
+        this.dataForGraphs = dataForGraphs;
     }
 }
 

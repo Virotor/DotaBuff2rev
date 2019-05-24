@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerMatchStatistics implements Serializable {
+    private String nickName;
     private long account_id;
     private Integer player_slot;
     private Integer hero_id;
@@ -20,7 +21,7 @@ public class PlayerMatchStatistics implements Serializable {
     private Integer netWorse;
     private List<Integer> goldChange = new ArrayList<>();
     private List<Integer> expChange = new ArrayList<>();
-    private List<Integer> hero_abilities = new ArrayList<>();
+    private List<Integer> backPack = new ArrayList<>();
     private static Boolean matchProcessingFlag = true;
 
     public long getAccount_id() {
@@ -89,10 +90,6 @@ public class PlayerMatchStatistics implements Serializable {
 
     public List<Integer> getExpChange() {
         return expChange;
-    }
-
-    public List<Integer> getHero_abilities() {
-        return hero_abilities;
     }
 
     public static Boolean getMatchProcessingFlag() {
@@ -167,11 +164,23 @@ public class PlayerMatchStatistics implements Serializable {
         this.expChange = expChange;
     }
 
-    public void setHero_abilities(List<Integer> hero_abilities) {
-        this.hero_abilities = hero_abilities;
-    }
-
     public static void setMatchProcessingFlag(Boolean matchProcessingFlag) {
         PlayerMatchStatistics.matchProcessingFlag = matchProcessingFlag;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public List<Integer> getBackPack() {
+        return backPack;
+    }
+
+    public void setBackPack(List<Integer> backpack) {
+        this.backPack = backPack;
     }
 }

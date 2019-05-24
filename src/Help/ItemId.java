@@ -73,7 +73,8 @@ public enum ItemId {
     i63("pt"),
     i64("recipe"),
     i65("midas"),
-    i66("oblivionstaff"),
+    i66("recipe"),
+    i67("oblivionstaff"),
     i68("recipe"),
     i69("perseverance"),
     i70("recipe_poor_mans_shield"),
@@ -88,6 +89,7 @@ public enum ItemId {
     i79("mekansm"),
     i80("recipe"),
     i81("vladmir"),
+    i218("wards"),
     i84("flying_courier"),
     i85("recipe"),
     i86("buckler"),
@@ -117,6 +119,7 @@ public enum ItemId {
     i199("recipe"),
     i200("recipe"),
     i104("dagon"),
+    i264("wards"),
     i201("dagon"),
     i202("dagon"),
     i203("dagon"),
@@ -132,7 +135,7 @@ public enum ItemId {
     i109("recipe"),
     i110("refresher"),
     i111("recipe"),
-    i112("assault"),
+    i112("cuirass"),
     i113("recipe"),
     i114("tarrasque"),
     i115("recipe"),
@@ -227,7 +230,7 @@ public enum ItemId {
     i226("lotus"),
     i242("crimson"),
     i236("dragonlance"),
-    i249("lilver"),
+    i249("silver"),
     i235("octatine"),
     i240("blightStone"),
     i229("solar"),
@@ -237,8 +240,12 @@ public enum ItemId {
     i256("aeon"),
     i259("kaya"),
     i223("meteor"),
-    i267("vesel");
-
+    i267("vesel"),
+    i277("yak"),
+    i269("holylocket"),
+    i261("crown"),
+    i279("crown"),
+    i273("kas");
 
 
     private String text;

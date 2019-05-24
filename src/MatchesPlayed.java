@@ -10,21 +10,8 @@ public class MatchesPlayed implements Serializable {
     private Integer kills;
     private Integer deaths;
     private Integer assists;
+    private Integer playerSlot;
 
-    /*public MatchesPlayed(){
-    }
-
-    public MatchesPlayed(Long matchID, Integer lobbyType, Boolean radiantWin, Integer duration, Integer heroId, Integer kills, Integer deaths, Integer assists) {
-        this.matchID = matchID;
-        this.lobbyType = lobbyType;
-        this.radiantWin = radiantWin;
-        this.duration = duration;
-        this.heroId = heroId;
-        this.kills = kills;
-        this.deaths = deaths;
-        this.assists = assists;
-    }
-*/
 
     public Long getMatchID() {
         return matchID;
@@ -88,5 +75,13 @@ public class MatchesPlayed implements Serializable {
 
     public void setAssists(Integer assists) {
         this.assists = assists;
+    }
+
+    public Integer getPlayerSlot() {
+        return playerSlot;
+    }
+
+    public void setPlayerSlot(Integer playerSlot) {
+        this.playerSlot = playerSlot;
     }
 }

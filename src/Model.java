@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Model implements Runnable {
     private PlayerStatistics playerStatistics;
     private String str;
@@ -5,7 +7,11 @@ public class Model implements Runnable {
     @Override
     public void run() {
         wait=false;
-        PlayerStatistics playerStatistics = Client.playerStatisticsAndMatches(str);
+        try {
+            PlayerStatistics playerStatistics = Client.playerStatisticsAndMatches(str);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         wait=true;
     }
 
