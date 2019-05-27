@@ -1,15 +1,19 @@
-import javafx.event.ActionEvent;
+package controller;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
+import model.ModelCancel;
+import model.ModelTask;
 
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -26,7 +30,7 @@ public class Menu {
 
     static  private MediaPlayer player;
 
-    void goMenu(Stage primaryStage) throws IOException {
+    public void goMenu(Stage primaryStage) throws IOException {
         Parent root;
         scene = primaryStage;
         FXMLLoader loader = new FXMLLoader(Menu.class.getResource("menu.fxml"));
@@ -35,46 +39,45 @@ public class Menu {
         idPlayer = (TextField) namespace.get("idPlayer");
         idMatch = (TextField) namespace.get("idMatch");
         playerName =(TextField) namespace.get("playerName");
-        AnchorPane anchorPane = (AnchorPane) namespace.get("Pane");
+        AnchorPane anchorPane = (AnchorPane) namespace.get("AnchorPane");
         ScrollPane scrollPane = (ScrollPane) namespace.get("ScrollPane");
+        AnchorPane pane = (AnchorPane) namespace.get("Pane");
         scrollPane.setFitToHeight(true);
         scrollPane.setFitToWidth(true);
-        scrollPane.autosize();
+        scrollPane.cacheHintProperty().bindBidirectional(anchorPane.cacheHintProperty());
+       // scrollPane.contentProperty().bind(anchorPane.clipProperty());
         Media media = new Media(Paths.get("src/HeroesIcon/main.mp4").toUri().toString());
         player = new MediaPlayer(media);
         MediaView mediaView = new MediaView(player);
-        anchorPane.getChildren().add(mediaView);
-        mediaView.fitWidthProperty().bind(anchorPane.widthProperty());
-        mediaView.fitHeightProperty().bind(anchorPane.heightProperty());
+        mediaView.setPreserveRatio(false);
+        pane.getChildren().add(mediaView);
+       mediaView.fitWidthProperty().bind(pane.widthProperty());
+        mediaView.fitHeightProperty().bind(pane.heightProperty());
         scene.setTitle("DotaBuff");
         scene.setScene(new Scene(root, 1280, 720));
         scene.show();
         player.setCycleCount(MediaPlayer.INDEFINITE);
         player.play();
-        //player.autoPlayProperty();
+        player.setMute(true);
+        player.setBalance(12);
     }
 
 
     public void goPlayer() throws IOException {
         WaitMenu waitMenu = new WaitMenu();
-        idPlayer.setDisable(true);
         waitMenu.waitProfile(scene, idPlayer.getText());
-        player.stop();
         ModelCancel.setCodeOfOperation(1);
     }
 
     public void goMatch() throws IOException {
         WaitMenu waitMenu = new WaitMenu();
-        idMatch.setDisable(true);
         waitMenu.waitMatches(scene, idMatch.getText());
         ModelCancel.setCodeOfOperation(1);
-        player.stop();
     }
 
-    public void goName(ActionEvent actionEvent) throws IOException {
-        WaitMenu waitMenu = new WaitMenu();
-        waitMenu.waitName(scene, playerName.getText());
+    public void goName() {
         ModelCancel.setCodeOfOperation(1);
-        player.stop();
+        ModelTask modelTask = new ModelTask(new Tab());
+        modelTask.taskName(scene,playerName.getText());
     }
 }

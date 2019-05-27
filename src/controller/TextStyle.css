@@ -1,0 +1,50 @@
+#GridPane{
+    -fx-background-image: url("../HeroesIcon/dota.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+
+}
+
+
+
+
+
+.TextStyle {
+
+    -fx-text-fill: blue;
+    -fx-underline: true;
+}
+
+#BorderPane {
+    -fx-background-image: url("../HeroesIcon/name.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+#BorderPaneLeft {
+    -fx-background-image: url("../HeroesIcon/dota2.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center ;
+}
+
+#AnchorPane {
+    -fx-background-image: url("../HeroesIcon/24587.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+#Radiant {
+    -fx-background-image: url("../HeroesIcon/dota2.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center ;
+}
+
+#Dire {
+    -fx-background-image: url("../HeroesIcon/,.,.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}

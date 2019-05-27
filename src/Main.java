@@ -1,18 +1,6 @@
+import controller.Menu;
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
-
-import java.nio.file.Paths;
 
 public class Main extends Application {
     @Override
@@ -54,7 +42,7 @@ public class Main extends Application {
        ControllerMatches cm = new ControllerMatches();
        cm.show(primaryStage);
         /*NickName nickName = new NickName();
-        nickName.show(primaryStage,Client.searchResponseByName("Sesta Espada"));*/
+        nickName.show(primaryStage,model.model.Client.searchResponseByName("Sesta Espada"));*/
     }
 
 

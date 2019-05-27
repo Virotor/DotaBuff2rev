@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Map;
 
-public class Controller {
+public class controller {
 
     static private Stage stage;
 
@@ -21,7 +21,7 @@ public class Controller {
     public void heroMenu(Stage primaryStage) throws IOException {
         stage = primaryStage;
         Parent root;
-        FXMLLoader loader = new FXMLLoader(Controller.class.getResource("sample.fxml"));
+        FXMLLoader loader = new FXMLLoader(controller.class.getResource("sample.fxml"));
         root = loader.load();
         Map<String, Object> namespace = loader.getNamespace();
         //this.setAction(namespace);

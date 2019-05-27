@@ -1,3 +1,5 @@
+package statistics;
+
 import java.io.Serializable;
 
 public class SearchResponseByName implements Serializable {

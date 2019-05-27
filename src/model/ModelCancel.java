@@ -1,3 +1,9 @@
+package model;
+
+import statistics.DataForGraphs;
+import statistics.PlayerMatchStatistics;
+import statistics.PlayerStatistics;
+
 import java.util.Stack;
 
 public class ModelCancel {
@@ -20,7 +26,7 @@ public class ModelCancel {
         return playerMatchStatisticsStack;
     }
 
-    public static void setPlayerMatchStatisticsStack(PlayerMatchStatistics[] playerMatchStatisticsStack) {
+    public  static void setPlayerMatchStatisticsStack(PlayerMatchStatistics[] playerMatchStatisticsStack) {
         ModelCancel.playerMatchStatisticsStack.push(playerMatchStatisticsStack);
     }
 

@@ -1,15 +1,16 @@
+package controller;
+
 import Help.HeroId;
 import Help.ItemId;
-import com.sun.webkit.Timer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Tab;
 import javafx.scene.control.Tooltip;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.image.Image;
@@ -18,6 +19,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.ModelCancel;
+import statistics.DataForGraphs;
+import statistics.PlayerMatchStatistics;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +38,7 @@ public class ControllerMatch {
     static private Stage stage;
 
 
-    public void show(Stage primaryStage, PlayerMatchStatistics[] playerMatchStatistics, DataForGraphs dataForGraphs) throws IOException {
+    public void show(Stage primaryStage, PlayerMatchStatistics[] playerMatchStatistics, DataForGraphs dataForGraphs, Tab tab) throws IOException {
         Parent root;
         stage = primaryStage;
         FXMLLoader loader = new FXMLLoader(ControllerMatches.class.getResource("match.fxml"));
@@ -60,16 +64,18 @@ public class ControllerMatch {
         this.deathText(namespace, playerMatchStatistics);
         this.deniesText(namespace, playerMatchStatistics);
         showItem(namespace, playerMatchStatistics);
-        stage.setTitle("DotaBuff");
-        stage.setScene(new Scene(root, 960, 540));
-        stage.show();
+        if(tab!=null){
+            tab.setContent(root);
+            tab.setText("Match");
+        }
+
     }
 
     private void showName(Map<String, Object> namespace, PlayerMatchStatistics[] playerMatchStatistics, DataForGraphs dataForGraphs) {
         for (int i = 0; i < 10; i++) {
             Text textField = (Text) namespace.get("name" + i);
             textField.setText(playerMatchStatistics[i].getNickName());
-            if(playerMatchStatistics[i].getAccount_id()!=0) {
+            if (playerMatchStatistics[i].getAccount_id() != 0) {
                 Object finalObject = playerMatchStatistics[i].getAccount_id();
                 textField.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
                     WaitMenu waitMenu = new WaitMenu();
@@ -106,14 +112,14 @@ public class ControllerMatch {
                 image.setImage(im);
             }
         }
-        for (int i = 0; i < 10; i++) {
+       /* for (int i = 0; i < 10; i++) {
             for (int j = 6; j < 9; j++) {
-                File file = new File(path + ItemId.valueOf("i" + playerMatchStatistics[i].getBackPack().get(j-6).toString()).toString() + ".jpg");
-                Image im = new Image(file.toURI().toString());
-                ImageView image = (ImageView) namespace.get("item" + i + j);
-                image.setImage(im);
-            }
+            File file = new File(path + ItemId.valueOf("i" + playerMatchStatistics[i].getBackPack().get(j - 6).toString()).toString() + ".jpg");
+            Image im = new Image(file.toURI().toString());
+            ImageView image = (ImageView) namespace.get("item" + i + j);
+            image.setImage(im);
         }
+    }*/
     }
 
     private void assistText(Map<String, Object> namespace, PlayerMatchStatistics[] playerMatchStatistics) {
@@ -294,22 +300,9 @@ public class ControllerMatch {
     }
 
     public void goBack() throws IOException {
-       switch (ModelCancel.getCodeOfOperation().pop()){
-           case 1:
-           {
-               Menu menu = new Menu();
-               menu.goMenu(stage);
-               break;
-           }
-           case 2:
-           {
-               ControllerMatches controllerMatches = new ControllerMatches();
-               ControllerMatches.setPlayer(ModelCancel.getPlayerStatisticsStack().pop());
-               ControllerMatches.setPage(0);
-               controllerMatches.show(stage);
-               break;
-           }
-       }
+        Menu menu = new Menu();
+        menu.goMenu(stage);
+
     }
 
 }

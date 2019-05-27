@@ -1,3 +1,5 @@
+package statistics;
+
 import java.io.Serializable;
 
 public class PlayerStatistics implements Serializable {

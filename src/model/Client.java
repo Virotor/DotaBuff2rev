@@ -1,19 +1,25 @@
+package model;
+
+import statistics.DataForGraphs;
+import statistics.PlayerMatchStatistics;
+import statistics.PlayerStatistics;
+import statistics.SearchResponseByName;
+
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 
 public class Client {
-    private static final int port = 7777;
-    private static final String addres = "192.168.43.227";
-    private static Socket socket;
-    private static DataOutputStream os;
-    private static DataInputStream is;
-    private static BufferedReader r;
+   static private  final int port = 7777;
+  static   private  final String addres = "100.91.99.251";
+    private  Socket socket;
+    private  DataOutputStream os;
+    private  DataInputStream is;
+    private  BufferedReader r;
 
-    private static PlayerMatchStatistics[] playerMatchStatistics;
-    private static DataForGraphs dataForGraphs;
-    static private Boolean isReady;
-    private static PlayerStatistics playerStatistics;
+    private  PlayerMatchStatistics[] playerMatchStatistics;
+    private DataForGraphs dataForGraphs;
+    private PlayerStatistics playerStatistics;
 
     static private SearchResponseByName[] searchResponseByName= null;
 
@@ -34,7 +40,7 @@ public class Client {
     }
 
 
-    public static PlayerStatistics playerStatisticsAndMatches(String id) throws IOException {
+    public PlayerStatistics playerStatisticsAndMatches(String id) throws IOException {
         try {
             InetAddress ip = InetAddress.getByName(addres);
             socket = new Socket(ip, port);
@@ -57,11 +63,10 @@ public class Client {
             throw new IOException("Не удалось установить интернет соединение");
 
         }
-        Client.isReady = true;
         return playerStatistics;
     }
 
-    public static void playerMatchStatistics(String id) throws IOException {
+    public  void playerMatchStatistics(String id) throws IOException {
         InetAddress ip = InetAddress.getByName(addres);
         try {
             socket = new Socket(ip, port);
@@ -89,7 +94,7 @@ public class Client {
 
     }
 
-    public static void searchResponseByName(String id) throws IOException {
+    public  void searchResponseByName(String id) throws IOException {
         InetAddress ip = InetAddress.getByName(addres);
         searchResponseByName = null;
         try {
@@ -121,27 +126,20 @@ public class Client {
     }
 
 
-    public static PlayerMatchStatistics[] getPlayerMatchStatistics() {
+    public  PlayerMatchStatistics[] getPlayerMatchStatistics() {
         return playerMatchStatistics;
     }
 
-    public static DataForGraphs getDataForGraphs() {
+    public  DataForGraphs getDataForGraphs() {
         return dataForGraphs;
     }
 
-    public static Boolean getIsReady() {
-        return isReady;
-    }
 
-    public static void setIsReady(Boolean isReady) {
-        Client.isReady = isReady;
-    }
-
-    public static PlayerStatistics getPlayerStatistics() {
+    public  PlayerStatistics getPlayerStatistics() {
         return playerStatistics;
     }
 
-    public static SearchResponseByName[] getSearchResponseByName() {
+    public  SearchResponseByName[] getSearchResponseByName() {
         return searchResponseByName;
     }
 }

@@ -1,21 +1,22 @@
+package controller;
+
 import Help.HeroId;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
+import model.ModelCancel;
+import statistics.PlayerStatistics;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,8 +24,8 @@ import java.util.Map;
 
 public class ControllerMatches {
 
-    static private PlayerStatistics player;
-    static private int page;
+    private PlayerStatistics player;
+    private int page = 0;
     @FXML
     static private Button back;
     @FXML
@@ -36,17 +37,19 @@ public class ControllerMatches {
     private TextField idMatch;
     private Map<String, Object> namespace;
 
-    static private String playerID;
 
-    static void setPlayerID(String playerID) {
-        ControllerMatches.playerID = playerID;
+
+    private String playerID;
+
+    public void setPlayerID(String playerID) {
+        this.playerID = playerID;
     }
 
-    void show(Stage primaryStage) throws IOException {
+    public void show(Stage primaryStage, Tab tab) throws IOException {
         Parent root;
+        scene=primaryStage;
         FXMLLoader loader = new FXMLLoader(ControllerMatches.class.getResource("etert.fxml"));
         root = loader.load();
-
         namespace = loader.getNamespace();
         newPlayer = (TextField) namespace.get("newPlayer");
         idMatch = (TextField) namespace.get("idMatch");
@@ -54,6 +57,7 @@ public class ControllerMatches {
         next = (Button) namespace.get("next");
         this.setPlayerInfo();
         this.imageShow();
+        this.setImageAction();
         this.killShow();
         this.deathsShow();
         this.assistsShow();
@@ -61,17 +65,17 @@ public class ControllerMatches {
         this.lobbyShow();
         this.winShow();
         this.setButton();
+        this.buttonText();
         this.buttonAction();
-        scene = primaryStage;
-        scene.setResizable(true);
-        scene.setTitle("DotaBuff");
-        scene.setScene(new Scene(root, 1280, 720));
-        scene.show();
+        if (tab != null) {
+            tab.setContent(root);
+            tab.setText(player.getNickName());
+        }
     }
 
 
-    static void setPlayer(PlayerStatistics player) {
-        ControllerMatches.player = player;
+    public void setPlayer(PlayerStatistics player) {
+        this.player = player;
     }
 
 
@@ -86,37 +90,23 @@ public class ControllerMatches {
         winrate.setText(player.getWinrate().toString());
     }
 
-    private void buttonAction() {
+    private void buttonText() {
         for (int i = 0; i < 25; i++) {
-            final int j = i;
+            int finalI = i;
             Text button = (Text) namespace.get("button" + i);
-            button.setText(player.getMatchesPlayeds()[j + 25 * page].getMatchID().toString());
-            button.removeEventHandler(MouseEvent.MOUSE_CLICKED,e->{
-                WaitMenu waitMenu = new WaitMenu();
-                try {
-                    ModelCancel.setCodeOfOperation(2);
-                    ModelCancel.setPlayerStatisticsStack(player);
-                    waitMenu.waitMatches(scene, player.getMatchesPlayeds()[j + 25 * page].getMatchID().toString());
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            });
-            button.removeEventHandler(MouseEvent.MOUSE_ENTERED,e->{
-                button.setUnderline(true);
-                Color color = new Color(0.2, 0.2, 0.5, 1);
-                button.setFill(color);
-            });
-            button.removeEventHandler(MouseEvent.MOUSE_EXITED,e->{
-                button.setUnderline(false);
-                Color color = new Color(0, 0, 0.0, 1);
-                button.setFill(color);
-            });
+            button.setText(player.getMatchesPlayeds()[finalI + 25 * page].getMatchID().toString());
+
+        }
+    }
+
+    private void buttonAction() {
+        for(int i = 0;i<25;i++) {
+            Text button = (Text) namespace.get("button" + i);
+            int finalI = i;
             button.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
                 WaitMenu waitMenu = new WaitMenu();
                 try {
-                    ModelCancel.setCodeOfOperation(2);
-                    ModelCancel.setPlayerStatisticsStack(player);
-                    waitMenu.waitMatches(scene, player.getMatchesPlayeds()[j + 25 * page].getMatchID().toString());
+                    waitMenu.waitMatches(scene,player.getMatchesPlayeds()[finalI +page*25].getMatchID().toString());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -134,13 +124,20 @@ public class ControllerMatches {
         }
     }
 
+
     private void imageShow() {
         for (int i = 0; i < 25; i++) {
             ImageView image = (ImageView) namespace.get("image" + i);
-            String name = "src/HeroesIcon/" + HeroId.valueOf("h" + player.getMatchesPlayeds()[i+page*25].getHeroId().toString()) + ".jpg";
+            String name = "src/HeroesIcon/" + HeroId.valueOf("h" + player.getMatchesPlayeds()[i + page * 25].getHeroId().toString()) + ".jpg";
             File file = new File(name);
             Image im = new Image(file.toURI().toString());
             image.setImage(im);
+        }
+    }
+
+    private void setImageAction() {
+        for (int i = 0; i < 25; i++) {
+            ImageView image = (ImageView) namespace.get("image" + i);
             int finalI = i;
             image.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
                 try {
@@ -166,7 +163,7 @@ public class ControllerMatches {
         }
     }
 
-    private void response(){
+   /* private void response(){
         idMatch.setOnMouseClicked(e-> {
             Popup popper = new Popup();
             TextField tf1 = new TextField();
@@ -182,20 +179,19 @@ public class ControllerMatches {
             popper.show(idMatch, 100, 100);
         });
 
-    }
+    }*/
 
 
     private void ClickOnHero(String heroName) throws IOException {
         ControllerHero ch = new ControllerHero();
         ch.ReadFile(heroName);
-        ch.setPrePlayerStatistics(true);
         ch.show(scene);
     }
 
     private void killShow() {
         for (int i = 0; i < 25; i++) {
             Text text = (Text) namespace.get("k" + i);
-            text.setText(player.getMatchesPlayeds()[i+page*25].getKills().toString());
+            text.setText(player.getMatchesPlayeds()[i + page * 25].getKills().toString());
         }
     }
 
@@ -203,34 +199,34 @@ public class ControllerMatches {
 
         for (int i = 0; i < 25; i++) {
             Text text = (Text) namespace.get("d" + i);
-            text.setText(player.getMatchesPlayeds()[i+page*25].getDeaths().toString());
+            text.setText(player.getMatchesPlayeds()[i + page * 25].getDeaths().toString());
         }
     }
 
     private void assistsShow() {
         for (int i = 0; i < 25; i++) {
             Text text = (Text) namespace.get("a" + i);
-            text.setText(player.getMatchesPlayeds()[i+page*25].getAssists().toString());
+            text.setText(player.getMatchesPlayeds()[i + page * 25].getAssists().toString());
         }
     }
 
     private void durationShow() {
         for (int i = 0; i < 25; i++) {
             Text text = (Text) namespace.get("duration" + i);
-            text.setText(Double.toString(player.getMatchesPlayeds()[i+page*25].getDuration() / 60));
+            text.setText(Double.toString(player.getMatchesPlayeds()[i + page * 25].getDuration() / 60));
         }
     }
 
     private void lobbyShow() {
         for (int i = 0; i < 25; i++) {
             Text text = (Text) namespace.get("lobby" + i);
-            text.setText(player.getMatchesPlayeds()[i+page*25].getLobbyType().toString());
+            text.setText(player.getMatchesPlayeds()[i + page * 25].getLobbyType().toString());
         }
     }
 
     private void winShow() {
         for (int i = 0; i < 25; i++) {
-            Text text = (Text) namespace.get("win" + i);
+           /* Text text = (Text) namespace.get("win" + i);
             if ((player.getMatchesPlayeds()[i+page*25].getRadiantWin()&&player.getMatchesPlayeds()[i+page*25].getPlayerSlot()<100)||
                     (!player.getMatchesPlayeds()[i+page*25].getRadiantWin()&&player.getMatchesPlayeds()[i+page*25].getPlayerSlot()>100)) {
                 text.setText("Победа");
@@ -240,7 +236,7 @@ public class ControllerMatches {
                 text.setText("Поражение");
                 Color color = new Color(1, 0.2, 0.2, 1);
                 text.setFill(color);
-            }
+            }*/
         }
     }
 
@@ -255,65 +251,67 @@ public class ControllerMatches {
         waitMenu.waitMatches(scene, idMatch.getText());
     }
 
-    static void setPage(int page) {
-        ControllerMatches.page = page;
+    public void setPage() {
+        this.page = 0;
     }
 
     private void setButton() {
-        if (page == 0) {
-            back.setVisible(false);
-        } else {
-            back.setVisible(true);
-            back.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, e -> refreshStage(-1));
-        }
-        if (page > (player.getMatchesPlayeds().length / 25)-1) {
+        back.setVisible(false);
+        back.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, e -> decPage());
+        if (page > (player.getMatchesPlayeds().length / 25) - 1) {
             next.setVisible(false);
         } else {
-            back.setVisible(true);
-            next.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, e -> refreshStage(1));
+            next.setVisible(true);
+            next.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, e -> incPage());
         }
     }
 
-    private void refreshStage(int i) {
-        Platform.runLater(()->{
-            page += i;
-            this.buttonAction();
-            this.imageShow();
-            this.killShow();
-            this.deathsShow();
-            this.assistsShow();
-            this.durationShow();
-            this.lobbyShow();
-            this.winShow();
-            this.setButton();
+    private void incPage() {
+
+        Platform.runLater(() -> {
+            page++;
+            refreshStage();
         });
     }
 
+    private void decPage() {
+        Platform.runLater(() -> {
+            page--;
+            refreshStage();
+        });
+    }
+
+    private void refreshStage() {
+        this.buttonText();
+        this.imageShow();
+        this.killShow();
+        this.deathsShow();
+        this.assistsShow();
+        this.durationShow();
+        this.lobbyShow();
+        this.winShow();
+        if(page==0){
+            back.setVisible(false);
+        }
+        else{
+            back.setVisible(true);
+        }
+        if(page>=(player.getMatchesPlayeds().length/25)-1){
+            next.setVisible(false);
+        }
+        else{
+            next.setVisible(true);
+        }
+    }
+
     public void Refresh() throws IOException {
+
         WaitMenu waitMenu = new WaitMenu();
         waitMenu.waitProfile(scene, playerID);
-        ModelCancel.setCodeOfOperation(2);
     }
 
     public void goBack() throws IOException {
-        switch (ModelCancel.getCodeOfOperation().pop()){
-            case 1: {
-                Menu menu = new Menu();
-                menu.goMenu(scene);
-                break;
-            }
-            case 2: {
-                ControllerMatches controllerMatches = new ControllerMatches();
-                ControllerMatches.setPlayer(ModelCancel.getPlayerStatisticsStack().pop());
-                page=0;
-                controllerMatches.show(scene);
-                break;
-            }
-            case 3: {
-                ControllerMatch controllerMatch = new ControllerMatch();
-                controllerMatch.show(scene,ModelCancel.getPlayerMatchStatisticsStack().pop(),ModelCancel.getDataForGraphsStack().pop());
-                break;
-            }
-        }
+        Menu menu = new Menu();
+        menu.goMenu(scene);
     }
 }

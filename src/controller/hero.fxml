@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerHero">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerHero">
    <children>
        <Accordion layoutX="591.0" layoutY="37.0" prefHeight="493.0" prefWidth="370.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
            <panes>
@@ -129,7 +129,7 @@
        </Accordion>
       <AnchorPane fx:id="ImagePane" layoutY="40.0" prefHeight="540.0" prefWidth="801.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="370.0" AnchorPane.topAnchor="40.0">
          <children>
-             <ImageView fx:id="imageM" fitHeight="4.0" fitWidth="1.0" layoutY="-1.0" AnchorPane.bottomAnchor="497.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="589.0" AnchorPane.topAnchor="-1.0">
+             <ImageView fx:id="imageM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
                  <viewport>
                      <Rectangle2D />
                  </viewport>

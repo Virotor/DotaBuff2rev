@@ -1,9 +1,11 @@
-//import ControllerMatches;
+package controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TitledPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -26,17 +28,12 @@ public class ControllerHero {
 
     private String nameHero;
 
-    private boolean isPrePlayerStatistics;
 
-    static private  PlayerMatchStatistics[] playerMatchStatistics;
-    static private  DataForGraphs dataForGraphs;
-
-
-    public void ReadFile(String name) {
+    void ReadFile(String name) {
         try {
             nameHero = name;
             int j = 0;
-            String tempString = "";
+            String tempString;
             FileReader hf;
             Scanner scan;
             ArrayList<String> listName = new ArrayList<>();
@@ -70,6 +67,10 @@ public class ControllerHero {
         Parent root;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("hero.fxml"));
         root = loader.load();
+        Scene scene = primaryStage.getScene();
+        ScrollPane node = (ScrollPane) scene.getRoot().getChildrenUnmodifiable().get(0);
+        AnchorPane pane = (AnchorPane) node.getContent();
+        TabPane tabPane = (TabPane) pane.getChildren().get(0);
         Map<String, Object> namespace = loader.getNamespace();
         Text lblData = (Text) namespace.get("textTable");
         lblData.setText(listText.get(4).toString());
@@ -107,48 +108,20 @@ public class ControllerHero {
             File file = new File(listNameView.get(i));
             Image im = new Image(file.toURI().toString());
             listImageView.get(i).setImage(im);
-            //listImageView.get(i).fitHeightProperty().bind(primaryStage.heightProperty());
-            //listImageView.get(i).fitWidthProperty().set(primaryStage.widthProperty().asObject().getValue());
         }
         AnchorPane anchorPane = (AnchorPane) namespace.get("ImagePane");
+        anchorPane.autosize();
         listImageView.get(0).fitWidthProperty().bind(anchorPane.widthProperty());
         listImageView.get(0).fitHeightProperty().bind(anchorPane.heightProperty());
-        scene = primaryStage;
-        scene.setTitle("DotaBuff");
-        scene.setScene(new Scene(root, 960, 540));
-        scene.show();
+        Tab tab = new Tab(nameHero, root);
+        tabPane.getTabs().add(tab);
     }
 
     public void goBack() throws IOException {
-        switch (ModelCancel.getCodeOfOperation().pop()) {
-            case 1: {
-                Menu menu = new Menu();
-                menu.goMenu(scene);
-                break;
-            }
-            case 2: {
-                ControllerMatches controllerMatches = new ControllerMatches();
-                controllerMatches.show(scene);
-                break;
-            }
-            case 3:{
-                ControllerMatch controllerMatch = new ControllerMatch();
-                controllerMatch.show(scene,ModelCancel.getPlayerMatchStatisticsStack().pop(),ModelCancel.getDataForGraphsStack().pop());
-                break;
-            }
-        }
+        Menu menu = new Menu();
+        menu.goMenu(scene);
     }
 
-    public void setPrePlayerStatistics(boolean prePlayerStatistics) {
-        isPrePlayerStatistics = prePlayerStatistics;
-    }
 
-    public void setPlayerMatchStatistics(PlayerMatchStatistics[] playerMatchStatistics) {
-        this.playerMatchStatistics = playerMatchStatistics;
-    }
-
-    public void setDataForGraphs(DataForGraphs dataForGraphs) {
-        this.dataForGraphs = dataForGraphs;
-    }
 }
 

@@ -1,3 +1,5 @@
+package statistics;
+
 import java.io.Serializable;
 
 public class MatchesPlayed implements Serializable {
@@ -11,6 +13,15 @@ public class MatchesPlayed implements Serializable {
     private Integer deaths;
     private Integer assists;
     private Integer playerSlot;
+    private  static  Boolean needMatches =true;
+
+    public static Boolean getNeedMatches() {
+        return needMatches;
+    }
+
+    public static void setNeedMatches(Boolean needMatches) {
+        MatchesPlayed.needMatches = needMatches;
+    }
 
 
     public Long getMatchID() {
