@@ -1,5 +1,6 @@
 package controller;
 
+import Help.HeroId;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,11 +15,10 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Scanner;
 
 public class ControllerHero {
 
@@ -28,38 +28,31 @@ public class ControllerHero {
 
     private String nameHero;
 
+    public static String userName = "root";
+    public static String password = "1111";
+    public static String connectionURL = "jdbc:mysql://localhost:3306/hero_db?autoReconnect=true&useSSL=false";
 
-    void ReadFile(String name) {
-        try {
-            nameHero = name;
-            int j = 0;
-            String tempString;
-            FileReader hf;
-            Scanner scan;
-            ArrayList<String> listName = new ArrayList<>();
-            listText = new ArrayList<>();
-            for (int i = 0; i < 9; i++) {
-                listText.add(new StringBuilder());
+
+    public void ReadFile(String name) {
+       listText = new ArrayList<>();
+       nameHero=name;
+        try (
+        Connection connection = DriverManager.getConnection(connectionURL, userName, password);
+                Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery("select * from hero where idhero  = '" + Integer.parseInt(name) + "'");
+            while (resultSet.next()) {
+                listText.add(new StringBuilder(resultSet.getString("firstskillname")));
+                listText.add(new StringBuilder(resultSet.getString("secondskillname")));
+                listText.add(new StringBuilder(resultSet.getString("thirdskillname")));
+                listText.add(new StringBuilder(resultSet.getString("ultimateskillname")));
+                listText.add(new StringBuilder(resultSet.getString("abouthero")));
+                listText.add(new StringBuilder(resultSet.getString("skill1")));
+                listText.add(new StringBuilder(resultSet.getString("skill2")));
+                listText.add(new StringBuilder(resultSet.getString("skill3")));
+                listText.add(new StringBuilder(resultSet.getString("skill4")));
             }
-            listName.add("Hero/" + name + "/text.txt");
-            hf = new FileReader(listName.get(0));
-            scan = new Scanner(hf);
-            while (j != 4) {
-                listText.get(j).append(scan.nextLine()).append("\n");
-                j++;
-            }
-            while (scan.hasNextLine()) {
-                tempString = scan.nextLine();
-                if (!tempString.equals("Способность")) {
-                    listText.get(j).append(tempString).append("\n");
-                } else {
-                    tempString = "";
-                    j++;
-                }
-            }
-            hf.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -98,12 +91,12 @@ public class ControllerHero {
         listImageView.add((ImageView) namespace.get("imageSecondSkill"));
         listImageView.add((ImageView) namespace.get("imageThirdSkill"));
         listImageView.add((ImageView) namespace.get("ultimateImage"));
-        listNameView.add("Hero/" + this.nameHero + "/image.png");
-        listNameView.add("Hero/" + this.nameHero + "/talents.png");
-        listNameView.add("Hero/" + this.nameHero + "/skill1.png");
-        listNameView.add("Hero/" + this.nameHero + "/skill2.png");
-        listNameView.add("Hero/" + this.nameHero + "/skill3.png");
-        listNameView.add("Hero/" + this.nameHero + "/ultimate.png");
+        listNameView.add("Hero/" + HeroId.valueOf("h"+ this.nameHero).toString() + "/image.png");
+        listNameView.add("Hero/" + HeroId.valueOf("h"+ this.nameHero).toString() + "/talents.png");
+        listNameView.add("Hero/" + HeroId.valueOf("h"+ this.nameHero).toString() + "/skill1.png");
+        listNameView.add("Hero/" + HeroId.valueOf("h"+ this.nameHero).toString() + "/skill2.png");
+        listNameView.add("Hero/" + HeroId.valueOf("h"+ this.nameHero).toString() + "/skill3.png");
+        listNameView.add("Hero/" + HeroId.valueOf("h"+ this.nameHero).toString() + "/ultimate.png");
         for (int i = 0; i < 6; i++) {
             File file = new File(listNameView.get(i));
             Image im = new Image(file.toURI().toString());

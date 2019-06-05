@@ -18,22 +18,22 @@
                <children>
                   <TabPane fx:id="tabPane" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
                      <tabs>
-                        <Tab  closable="false" text="Главное меню">
+                        <Tab closable="false" text="Главное меню">
                            <content>
                               <AnchorPane fx:id="MainPane">
                                  <children>
-                                    <ScrollPane  fx:id="ScrollPane" fitToHeight="true" fitToWidth="true" pannable="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <ScrollPane fx:id="ScrollPane" fitToHeight="true" fitToWidth="true" pannable="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <content>
                                           <AnchorPane>
                                              <children>
-                                                <BorderPane stylesheets="TextStyle.css" id="BorderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <BorderPane id="BorderPane" stylesheets="@../Style/TextStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <bottom>
                                                       <AnchorPane BorderPane.alignment="CENTER">
                                                          <children>
-                                                            <Button fx:id="dfs1" layoutX="1192.0" layoutY="30.0" mnemonicParsing="false" onAction="#goPlayer" text="Go" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="23.0" />
-                                                              <Button fx:id="dfs" layoutX="274.0" layoutY="30.0" mnemonicParsing="false" onAction="#goMatch" text="Go" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="274.0" />
-                                                              <TextField fx:id="idPlayer" layoutX="946.0" layoutY="29.0" prefHeight="30.0" prefWidth="240.0" promptText="id игрока" AnchorPane.bottomAnchor="29.0" AnchorPane.rightAnchor="69.0" />
-                                                            <TextField fx:id="idMatch" layoutX="24.0" layoutY="29.0" prefHeight="30.0" prefWidth="240.0" promptText="id матча" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="24.0" />
+                                                            <Button fx:id="dfs1" layoutX="342.0" layoutY="10.0" mnemonicParsing="false" onAction="#goPlayer" text="Go" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                                              <Button fx:id="dfs" layoutX="275.0" layoutY="15.0" mnemonicParsing="false" onAction="#goMatch" text="Go" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="275.0" />
+                                                              <TextField fx:id="idPlayer" layoutX="91.0" layoutY="15.0" prefHeight="30.0" prefWidth="240.0" promptText="id игрока" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="15.0" />
+                                                            <TextField fx:id="idMatch" layoutX="23.0" layoutY="15.0" prefHeight="30.0" prefWidth="240.0" promptText="id матча" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0" />
                                                          </children>
                                                       </AnchorPane>
                                                    </bottom>
@@ -42,12 +42,12 @@
                                                          <children>
                                                             <TextField fx:id="playerName" promptText="Имя игрока">
                                                                <HBox.margin>
-                                                                  <Insets left="25.0" top="25.0" />
+                                                                  <Insets bottom="10.0" left="25.0" top="15.0" />
                                                                </HBox.margin>
                                                             </TextField>
                                                             <Button mnemonicParsing="false" onAction="#goName" text="Go">
                                                                <HBox.margin>
-                                                                  <Insets left="10.0" top="25.0" />
+                                                                  <Insets bottom="10.0" left="10.0" top="15.0" />
                                                                </HBox.margin>
                                                             </Button>
                                                          </children>
@@ -57,10 +57,10 @@
                                                       <AnchorPane fx:id="Pane" BorderPane.alignment="CENTER" />
                                                    </center>
                                                    <left>
-                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                                      <AnchorPane prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
                                                    </left>
                                                    <right>
-                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                                      <AnchorPane prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
                                                    </right>
                                                 </BorderPane>
                                              </children>

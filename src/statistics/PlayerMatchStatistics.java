@@ -24,7 +24,6 @@ public class PlayerMatchStatistics implements Serializable {
     private List<Integer> goldChange = new ArrayList<>();
     private List<Integer> expChange = new ArrayList<>();
     private List<Integer> backPack = new ArrayList<>();
-    private static Boolean matchProcessingFlag = true;
 
     public long getAccount_id() {
         return account_id;
@@ -94,9 +93,6 @@ public class PlayerMatchStatistics implements Serializable {
         return expChange;
     }
 
-    public static Boolean getMatchProcessingFlag() {
-        return matchProcessingFlag;
-    }
 
     public void setAccount_id(long account_id) {
         this.account_id = account_id;
@@ -166,9 +162,6 @@ public class PlayerMatchStatistics implements Serializable {
         this.expChange = expChange;
     }
 
-    public static void setMatchProcessingFlag(Boolean matchProcessingFlag) {
-        PlayerMatchStatistics.matchProcessingFlag = matchProcessingFlag;
-    }
 
     public String getNickName() {
         return nickName;

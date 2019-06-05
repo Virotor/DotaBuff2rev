@@ -49,8 +49,8 @@ public class WaitMenu {
         Scene scene= primaryStage.getScene();
         AnchorPane anchorPane =(AnchorPane) scene.getRoot();
         anchorPane.getChildren().add(root.getChildrenUnmodifiable().get(0));
-       /* model.ModelTask modelTask = new model.ModelTask();
-        modelTask.taskName(primaryStage,name);*/
+        model.ModelTask modelTask = new model.ModelTask();
+        modelTask.taskName(primaryStage,name);
         primaryStage.show();
     }
 }

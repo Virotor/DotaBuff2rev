@@ -1,10 +1,12 @@
 package controller;
 
+import Help.GameModes;
 import Help.HeroId;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextField;
@@ -20,6 +22,7 @@ import statistics.PlayerStatistics;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.Map;
 
 public class ControllerMatches {
@@ -38,7 +41,6 @@ public class ControllerMatches {
     private Map<String, Object> namespace;
 
 
-
     private String playerID;
 
     public void setPlayerID(String playerID) {
@@ -47,7 +49,7 @@ public class ControllerMatches {
 
     public void show(Stage primaryStage, Tab tab) throws IOException {
         Parent root;
-        scene=primaryStage;
+        scene = primaryStage;
         FXMLLoader loader = new FXMLLoader(ControllerMatches.class.getResource("etert.fxml"));
         root = loader.load();
         namespace = loader.getNamespace();
@@ -67,9 +69,10 @@ public class ControllerMatches {
         this.setButton();
         this.buttonText();
         this.buttonAction();
-        if (tab != null) {
+        if (tab!= null) {
             tab.setContent(root);
             tab.setText(player.getNickName());
+            tab.setOnClosed(event -> tab.setContent(new Accordion()));
         }
     }
 
@@ -87,26 +90,30 @@ public class ControllerMatches {
         Text lose = (Text) namespace.get("lose");
         lose.setText(player.getLose().toString());
         Text winrate = (Text) namespace.get("winrate");
-        winrate.setText(player.getWinrate().toString());
+        winrate.setText(new DecimalFormat("#00.00").format(player.getWinrate()));
     }
 
     private void buttonText() {
         for (int i = 0; i < 25; i++) {
-            int finalI = i;
+            if(i+page*25>player.getMatchesPlayeds().length){
+                break;
+            }
             Text button = (Text) namespace.get("button" + i);
-            button.setText(player.getMatchesPlayeds()[finalI + 25 * page].getMatchID().toString());
-
+            button.setText(player.getMatchesPlayeds()[i + 25 * page].getMatchID().toString());
         }
     }
 
     private void buttonAction() {
-        for(int i = 0;i<25;i++) {
+        for (int i = 0; i < 25; i++) {
+            if(i+page*25>player.getMatchesPlayeds().length){
+                break;
+            }
             Text button = (Text) namespace.get("button" + i);
             int finalI = i;
             button.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
                 WaitMenu waitMenu = new WaitMenu();
                 try {
-                    waitMenu.waitMatches(scene,player.getMatchesPlayeds()[finalI +page*25].getMatchID().toString());
+                    waitMenu.waitMatches(scene, player.getMatchesPlayeds()[finalI + page * 25].getMatchID().toString());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -118,7 +125,7 @@ public class ControllerMatches {
             });
             button.addEventHandler(MouseEvent.MOUSE_EXITED, e -> {
                 button.setUnderline(false);
-                Color color = new Color(0, 0, 0.0, 1);
+                Color color = new Color(1, 1, 1, 1);
                 button.setFill(color);
             });
         }
@@ -127,6 +134,9 @@ public class ControllerMatches {
 
     private void imageShow() {
         for (int i = 0; i < 25; i++) {
+            if(i+page*25>player.getMatchesPlayeds().length){
+                break;
+            }
             ImageView image = (ImageView) namespace.get("image" + i);
             String name = "src/HeroesIcon/" + HeroId.valueOf("h" + player.getMatchesPlayeds()[i + page * 25].getHeroId().toString()) + ".jpg";
             File file = new File(name);
@@ -137,11 +147,14 @@ public class ControllerMatches {
 
     private void setImageAction() {
         for (int i = 0; i < 25; i++) {
+            if(i+page*25>player.getMatchesPlayeds().length){
+                break;
+            }
             ImageView image = (ImageView) namespace.get("image" + i);
             int finalI = i;
             image.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
                 try {
-                    this.ClickOnHero(HeroId.valueOf("h" + player.getMatchesPlayeds()[finalI + page * 25].getHeroId()).toString());
+                    this.ClickOnHero(player.getMatchesPlayeds()[finalI + page * 25].getHeroId().toString());
                     ModelCancel.setCodeOfOperation(2);
                     ModelCancel.setPlayerStatisticsStack(player);
                 } catch (IOException ex) {
@@ -163,23 +176,6 @@ public class ControllerMatches {
         }
     }
 
-   /* private void response(){
-        idMatch.setOnMouseClicked(e-> {
-            Popup popper = new Popup();
-            TextField tf1 = new TextField();
-            TextField tf2 = new TextField();
-            popper.setAutoHide(true);
-            popper.setX(350);
-            popper.setY(200);
-            tf1.setLayoutX(4);
-            tf2.setLayoutY(90);
-            AnchorPane group = new AnchorPane(tf1, tf2);
-            group.setStyle("-fx-background-color: rgba(0, 255, 0, .3)");
-            popper.getContent().addAll(group);
-            popper.show(idMatch, 100, 100);
-        });
-
-    }*/
 
 
     private void ClickOnHero(String heroName) throws IOException {
@@ -190,14 +186,20 @@ public class ControllerMatches {
 
     private void killShow() {
         for (int i = 0; i < 25; i++) {
+            if(i+page*25>player.getMatchesPlayeds().length){
+                break;
+            }
             Text text = (Text) namespace.get("k" + i);
             text.setText(player.getMatchesPlayeds()[i + page * 25].getKills().toString());
         }
     }
 
     private void deathsShow() {
-
         for (int i = 0; i < 25; i++) {
+            if(i+page*25>player.getMatchesPlayeds().length){
+                break;
+            }
+
             Text text = (Text) namespace.get("d" + i);
             text.setText(player.getMatchesPlayeds()[i + page * 25].getDeaths().toString());
         }
@@ -205,6 +207,9 @@ public class ControllerMatches {
 
     private void assistsShow() {
         for (int i = 0; i < 25; i++) {
+            if(i+page*25>player.getMatchesPlayeds().length){
+                break;
+            }
             Text text = (Text) namespace.get("a" + i);
             text.setText(player.getMatchesPlayeds()[i + page * 25].getAssists().toString());
         }
@@ -212,21 +217,29 @@ public class ControllerMatches {
 
     private void durationShow() {
         for (int i = 0; i < 25; i++) {
-            Text text = (Text) namespace.get("duration" + i);
-            text.setText(Double.toString(player.getMatchesPlayeds()[i + page * 25].getDuration() / 60));
+            if(i+25*page<player.getMatchesPlayeds().length) {
+                Text text = (Text) namespace.get("duration" + i);
+                text.setText(Double.toString(player.getMatchesPlayeds()[i + page * 25].getDuration() / 60));
+            }
         }
     }
 
     private void lobbyShow() {
         for (int i = 0; i < 25; i++) {
+            if(i+page*25>player.getMatchesPlayeds().length){
+                break;
+            }
             Text text = (Text) namespace.get("lobby" + i);
-            text.setText(player.getMatchesPlayeds()[i + page * 25].getLobbyType().toString());
+            text.setText(GameModes.valueOf("g"+player.getMatchesPlayeds()[i + page * 25].getLobbyType().toString()).toString());
         }
     }
 
     private void winShow() {
         for (int i = 0; i < 25; i++) {
-           /* Text text = (Text) namespace.get("win" + i);
+            if(i+page*25>player.getMatchesPlayeds().length){
+                break;
+            }
+            Text text = (Text) namespace.get("win" + i);
             if ((player.getMatchesPlayeds()[i+page*25].getRadiantWin()&&player.getMatchesPlayeds()[i+page*25].getPlayerSlot()<100)||
                     (!player.getMatchesPlayeds()[i+page*25].getRadiantWin()&&player.getMatchesPlayeds()[i+page*25].getPlayerSlot()>100)) {
                 text.setText("Победа");
@@ -236,7 +249,7 @@ public class ControllerMatches {
                 text.setText("Поражение");
                 Color color = new Color(1, 0.2, 0.2, 1);
                 text.setFill(color);
-            }*/
+            }
         }
     }
 
@@ -290,16 +303,14 @@ public class ControllerMatches {
         this.durationShow();
         this.lobbyShow();
         this.winShow();
-        if(page==0){
+        if (page == 0) {
             back.setVisible(false);
-        }
-        else{
+        } else {
             back.setVisible(true);
         }
-        if(page>=(player.getMatchesPlayeds().length/25)-1){
+        if (page >= (player.getMatchesPlayeds().length / 25) - 1) {
             next.setVisible(false);
-        }
-        else{
+        } else {
             next.setVisible(true);
         }
     }
@@ -310,8 +321,4 @@ public class ControllerMatches {
         waitMenu.waitProfile(scene, playerID);
     }
 
-    public void goBack() throws IOException {
-        Menu menu = new Menu();
-        menu.goMenu(scene);
-    }
 }

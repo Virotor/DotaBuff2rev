@@ -111,6 +111,7 @@ public enum ItemId {
     i99("recipe"),
     i100("eul"),
     i232("lens"),
+    i233("resipe"),
     i101("recipe"),
     i102("force"),
     i103("recipe"),
@@ -245,7 +246,9 @@ public enum ItemId {
     i269("holylocket"),
     i261("crown"),
     i279("crown"),
-    i273("kas");
+    i273("kas"),
+    i239("recipe"),
+    i220("recipe");
 
 
     private String text;

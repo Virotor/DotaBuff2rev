@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
 <?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMatches">
    <children>
-      <BorderPane id="BorderPane" prefHeight="720.0" prefWidth="1280.0" stylesheets="TextStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane id="Radiant" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../Style/TextStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane minHeight="65.0" minWidth="100.0" prefHeight="66.0" prefWidth="1172.0" BorderPane.alignment="CENTER">
                <children>
                   <Text layoutX="204.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя игрока">
                      <font>
                         <Font name="Times New Roman" size="18.0" />
-                     </font></Text>
+                     </font>
+                     </Text>
+
                   <Text layoutX="458.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Победы">
                      <font>
                         <Font name="Times New Roman" size="18.0" />
-                     </font></Text>
+                     </font>
+                  </Text>
                   <Text fx:id="name" layoutX="204.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="n">
                      <font>
                         <Font name="Times New Roman" size="18.0" />
-                     </font></Text>
-                  <Text fx:id="win" layoutX="464.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="w">
-                     <font>
-                        <Font name="Times New Roman" size="18.0" />
-                     </font></Text>
+                     </font>
+                  </Text>
                   <Text layoutX="525.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поражения">
                      <font>
                         <Font name="Times New Roman" size="18.0" />
-                     </font></Text>
+                     </font>
+                  </Text>
                   <Text layoutX="620.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Доля побед">
                      <font>
                         <Font name="Times New Roman" size="18.0" />
-                     </font></Text>
+                     </font>
+                     </Text>
                   <Text fx:id="lose" layoutX="525.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="l">
                      <font>
                         <Font name="Times New Roman" size="18.0" />
@@ -48,296 +53,300 @@
                         <Font name="Times New Roman" size="18.0" />
                      </font></Text>
                   <Button layoutX="1007.0" layoutY="33.0" mnemonicParsing="false" onAction="#Refresh" text="Oбновить" AnchorPane.rightAnchor="185.0" AnchorPane.topAnchor="30.0" />
-                  <Button layoutX="1105.0" layoutY="30.0" mnemonicParsing="false" onAction="#goBack" text="Назад" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="30.0" />
+                  <Text fx:id="win" layoutX="458.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="w">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </top>
          <center>
             <AnchorPane prefHeight="654.0" prefWidth="1156.0">
                <children>
-                  <ScrollPane fitToWidth="true" layoutX="1.0" prefHeight="634.0" prefWidth="885.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+                  <ScrollPane fitToWidth="true" layoutX="1.0" pannable="true" prefHeight="610.0" prefWidth="880.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
                     <content>
-                        <HBox id="GridPane" alignment="CENTER" stylesheets="TextStyle.css">
+                        <HBox id="BorderPane" alignment="CENTER" stylesheets="@../Style/TextStyle.css">
                            <children>
                               <AnchorPane BorderPane.alignment="CENTER">
                                  <children>
-                                    <GridPane alignment="CENTER" cache="true" hgap="5.0" pickOnBounds="false" prefHeight="879.0" prefWidth="861.0" stylesheets="TextStyle.css" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <GridPane alignment="CENTER" cache="true" hgap="5.0" pickOnBounds="false" prefHeight="879.0" prefWidth="861.0" stylesheets="@../Style/TextStyle.css" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <Text fx:id="button0" strokeType="OUTSIDE" strokeWidth="0.0" text="Подробнее" GridPane.columnIndex="7">
+                                          <Text fx:id="button0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text id="#Text" fx:id="button1" strokeType="OUTSIDE" strokeWidth="0.0" text="Подробнее" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                          <Text id="#Text" fx:id="button1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button2" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                          <Text fx:id="button2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button3" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                                          <Text fx:id="button3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button4" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                          <Text fx:id="button4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button5" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                          <Text fx:id="button5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="5">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button6" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                                          <Text fx:id="button6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="6">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button7" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                                          <Text fx:id="button7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="7">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button8" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="8">
+                                          <Text fx:id="button8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="8">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button9" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="9">
+                                          <Text fx:id="button9" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="9">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button10" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="10">
+                                          <Text fx:id="button10" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="10">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button11" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="11">
+                                          <Text fx:id="button11" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="11">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button12" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="12">
+                                          <Text fx:id="button12" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="12">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button13" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="13">
+                                          <Text fx:id="button13" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="13">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button14" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="14">
+                                          <Text fx:id="button14" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="14">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button15" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="15">
+                                          <Text fx:id="button15" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="15">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button16" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="16">
+                                          <Text fx:id="button16" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="16">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button17" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="17">
+                                          <Text fx:id="button17" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="17">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button18" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="18">
+                                          <Text fx:id="button18" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="18">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button19" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="19">
+                                          <Text fx:id="button19" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="19">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button20" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="20">
+                                          <Text fx:id="button20" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="20">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button21" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="21">
+                                          <Text fx:id="button21" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="21">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button22" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="22">
+                                          <Text fx:id="button22" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="22">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button23" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="23">
+                                          <Text fx:id="button23" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="23">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="button24" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="24">
+                                          <Text fx:id="button24" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.rowIndex="24">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Text>
-                                          <Text fx:id="lobby0" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" />
-                                          <Text fx:id="win0" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                                          <Text fx:id="k0" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="0" />
-                                          <Text fx:id="d0" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="0" />
-                                          <Text fx:id="a0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="0" />
-                                          <Text fx:id="duration0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                                          <Text fx:id="lobby1" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="116.5244140625" GridPane.rowIndex="1" />
-                                          <Text fx:id="win1" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                          <Text fx:id="k1" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                                          <Text fx:id="d1" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                                          <Text fx:id="a1" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                                          <Text fx:id="duration1" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                          <Text fx:id="lobby2" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="2" />
-                                          <Text fx:id="win2" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                          <Text fx:id="k2" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                                          <Text fx:id="d2" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                                          <Text fx:id="a2" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                                          <Text fx:id="duration2" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                          <Text fx:id="lobby3" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="3" />
-                                          <Text fx:id="win3" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                          <Text fx:id="k3" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                                          <Text fx:id="d3" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                                          <Text fx:id="a3" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                          <Text fx:id="duration3" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                          <Text fx:id="lobby4" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="4" />
-                                          <Text fx:id="win4" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                          <Text fx:id="k4" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                                          <Text fx:id="d4" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-                                          <Text fx:id="a4" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-                                          <Text fx:id="duration4" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                          <Text fx:id="lobby5" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="5" />
-                                          <Text fx:id="win5" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                          <Text fx:id="k5" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                                          <Text fx:id="d5" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                                          <Text fx:id="a5" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-                                          <Text fx:id="duration5" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                                          <Text fx:id="lobby6" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="6" />
-                                          <Text fx:id="win6" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                                          <Text fx:id="k6" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-                                          <Text fx:id="d6" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-                                          <Text fx:id="a6" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                                          <Text fx:id="duration6" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                                          <Text fx:id="lobby7" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="7" />
-                                          <Text fx:id="win7" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                          <Text fx:id="k7" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-                                          <Text fx:id="d7" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-                                          <Text fx:id="a7" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-                                          <Text fx:id="duration7" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                                          <Text fx:id="lobby8" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="8" />
-                                          <Text fx:id="win8" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                                          <Text fx:id="k8" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-                                          <Text fx:id="d8" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="8" />
-                                          <Text fx:id="a8" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-                                          <Text fx:id="duration8" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-                                          <Text fx:id="lobby9" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="9" />
-                                          <Text fx:id="win9" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                                          <Text fx:id="k9" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-                                          <Text fx:id="d9" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-                                          <Text fx:id="a9" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-                                          <Text fx:id="duration9" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                                          <Text fx:id="lobby10" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="10" />
-                                          <Text fx:id="win10" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-                                          <Text fx:id="k10" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="10" />
-                                          <Text fx:id="d10" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="10" />
-                                          <Text fx:id="a10" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="10" />
-                                          <Text fx:id="duration10" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-                                          <Text fx:id="lobby11" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="11" />
-                                          <Text fx:id="win11" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-                                          <Text fx:id="k11" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="11" />
-                                          <Text fx:id="d11" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="11" />
-                                          <Text fx:id="a11" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="11" />
-                                          <Text fx:id="duration11" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="11" />
-                                          <Text fx:id="lobby12" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="12" />
-                                          <Text fx:id="win12" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-                                          <Text fx:id="k12" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="12" />
-                                          <Text fx:id="d12" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="12" />
-                                          <Text fx:id="a12" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="12" />
-                                          <Text fx:id="duration12" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="12" />
-                                          <Text fx:id="lobby13" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="13" />
-                                          <Text fx:id="win13" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="13" />
-                                          <Text fx:id="k13" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="13" />
-                                          <Text fx:id="d13" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="13" />
-                                          <Text fx:id="a13" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="13" />
-                                          <Text fx:id="duration13" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="13" />
-                                          <Text fx:id="lobby14" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="14" />
-                                          <Text fx:id="win14" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-                                          <Text fx:id="k14" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="14" />
-                                          <Text fx:id="d14" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="14" />
-                                          <Text fx:id="a14" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="14" />
-                                          <Text fx:id="duration14" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="14" />
-                                          <Text fx:id="lobby15" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="15" />
-                                          <Text fx:id="win15" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="15" />
-                                          <Text fx:id="k15" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="15" />
-                                          <Text fx:id="d15" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="15" />
-                                          <Text fx:id="a15" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="15" />
-                                          <Text fx:id="duration15" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="15" />
-                                          <Text fx:id="lobby16" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="16" />
-                                          <Text fx:id="win16" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="16" />
-                                          <Text fx:id="k16" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="16" />
-                                          <Text fx:id="d16" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="16" />
-                                          <Text fx:id="a16" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="16" />
-                                          <Text fx:id="duration16" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="16" />
-                                          <Text fx:id="lobby17" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="17" />
-                                          <Text fx:id="win17" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="17" />
-                                          <Text fx:id="k17" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="17" />
-                                          <Text fx:id="d17" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="17" />
-                                          <Text fx:id="a17" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="17" />
-                                          <Text fx:id="duration17" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="17" />
-                                          <Text fx:id="lobby18" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="18" />
-                                          <Text fx:id="win18" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="18" />
-                                          <Text fx:id="k18" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="18" />
-                                          <Text fx:id="d18" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="18" />
-                                          <Text fx:id="a18" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="18" />
-                                          <Text fx:id="duration18" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="18" />
-                                          <Text fx:id="lobby19" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="19" />
-                                          <Text fx:id="win19" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="19" />
-                                          <Text fx:id="k19" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="19" />
-                                          <Text fx:id="d19" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="19" />
-                                          <Text fx:id="a19" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="19" />
-                                          <Text fx:id="duration19" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="19" />
-                                          <Text fx:id="lobby20" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="20" />
-                                          <Text fx:id="win20" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="20" />
-                                          <Text fx:id="k20" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="20" />
-                                          <Text fx:id="d20" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="20" />
-                                          <Text fx:id="a20" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="20" />
-                                          <Text fx:id="duration20" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="20" />
-                                          <Text fx:id="lobby21" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="21" />
-                                          <Text fx:id="win21" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="21" />
-                                          <Text fx:id="k21" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="21" />
-                                          <Text fx:id="d21" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="21" />
-                                          <Text fx:id="a21" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="21" />
-                                          <Text fx:id="duration21" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="21" />
-                                          <Text fx:id="lobby22" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="22" />
-                                          <Text fx:id="win22" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="22" />
-                                          <Text fx:id="k22" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="22" />
-                                          <Text fx:id="d22" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="22" />
-                                          <Text fx:id="a22" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="22" />
-                                          <Text fx:id="duration22" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="22" />
-                                          <Text fx:id="lobby23" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="23" />
-                                          <Text fx:id="win23" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="23" />
-                                          <Text fx:id="k23" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="23" />
-                                          <Text fx:id="d23" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="23" />
-                                          <Text fx:id="a23" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="23" />
-                                          <Text fx:id="duration23" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="23" />
-                                          <Text fx:id="lobby24" strokeType="OUTSIDE" strokeWidth="0.0" text="LobbyType" wrappingWidth="94.5244140625" GridPane.rowIndex="24" />
-                                          <Text fx:id="win24" strokeType="OUTSIDE" strokeWidth="0.0" text="Win" GridPane.columnIndex="1" GridPane.rowIndex="24" />
-                                          <Text fx:id="k24" strokeType="OUTSIDE" strokeWidth="0.0" text="K" GridPane.columnIndex="4" GridPane.rowIndex="24" />
-                                          <Text fx:id="d24" strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="5" GridPane.rowIndex="24" />
-                                          <Text fx:id="a24" strokeType="OUTSIDE" strokeWidth="0.0" text="A" GridPane.columnIndex="6" GridPane.rowIndex="24" />
-                                          <Text fx:id="duration24" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.columnIndex="2" GridPane.rowIndex="24" />
+                                          <Text fx:id="lobby0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" />
+                                          <Text fx:id="win0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                          <Text fx:id="k0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                                          <Text fx:id="d0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                                          <Text fx:id="a0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                                          <Text fx:id="duration0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                          <Text fx:id="lobby1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="97.5244140625" GridPane.rowIndex="1" />
+                                          <Text fx:id="win1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Text fx:id="k1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                          <Text fx:id="d1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                          <Text fx:id="a1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                          <Text fx:id="duration1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <Text fx:id="lobby2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="2" />
+                                          <Text fx:id="win2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Text fx:id="k2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                          <Text fx:id="d2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                          <Text fx:id="a2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                          <Text fx:id="duration2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                          <Text fx:id="lobby3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="3" />
+                                          <Text fx:id="win3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Text fx:id="k3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                          <Text fx:id="d3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                          <Text fx:id="a3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                          <Text fx:id="duration3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                          <Text fx:id="lobby4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="4" />
+                                          <Text fx:id="win4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Text fx:id="k4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                          <Text fx:id="d4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                                          <Text fx:id="a4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                          <Text fx:id="duration4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                          <Text fx:id="lobby5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="5" />
+                                          <Text fx:id="win5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <Text fx:id="k5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                          <Text fx:id="d5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                          <Text fx:id="a5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                                          <Text fx:id="duration5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                          <Text fx:id="lobby6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="6" />
+                                          <Text fx:id="win6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <Text fx:id="k6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                          <Text fx:id="d6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                                          <Text fx:id="a6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                                          <Text fx:id="duration6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                          <Text fx:id="lobby7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="7" />
+                                          <Text fx:id="win7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <Text fx:id="k7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                          <Text fx:id="d7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                                          <Text fx:id="a7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                          <Text fx:id="duration7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                          <Text fx:id="lobby8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="8" />
+                                          <Text fx:id="win8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <Text fx:id="k8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                                          <Text fx:id="d8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                                          <Text fx:id="a8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                                          <Text fx:id="duration8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                          <Text fx:id="lobby9" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="9" />
+                                          <Text fx:id="win9" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                          <Text fx:id="k9" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                                          <Text fx:id="d9" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                                          <Text fx:id="a9" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                                          <Text fx:id="duration9" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                          <Text fx:id="lobby10" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="10" />
+                                          <Text fx:id="win10" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                          <Text fx:id="k10" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                                          <Text fx:id="d10" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+                                          <Text fx:id="a10" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+                                          <Text fx:id="duration10" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                                          <Text fx:id="lobby11" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="11" />
+                                          <Text fx:id="win11" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                          <Text fx:id="k11" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+                                          <Text fx:id="d11" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+                                          <Text fx:id="a11" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="11" />
+                                          <Text fx:id="duration11" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                          <Text fx:id="lobby12" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="12" />
+                                          <Text fx:id="win12" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                          <Text fx:id="k12" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="12" />
+                                          <Text fx:id="d12" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="12" />
+                                          <Text fx:id="a12" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="12" />
+                                          <Text fx:id="duration12" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                                          <Text fx:id="lobby13" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="13" />
+                                          <Text fx:id="win13" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                          <Text fx:id="k13" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+                                          <Text fx:id="d13" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="13" />
+                                          <Text fx:id="a13" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="13" />
+                                          <Text fx:id="duration13" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                                          <Text fx:id="lobby14" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="14" />
+                                          <Text fx:id="win14" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                          <Text fx:id="k14" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="14" />
+                                          <Text fx:id="d14" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="14" />
+                                          <Text fx:id="a14" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="14" />
+                                          <Text fx:id="duration14" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                                          <Text fx:id="lobby15" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="15" />
+                                          <Text fx:id="win15" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+                                          <Text fx:id="k15" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="15" />
+                                          <Text fx:id="d15" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="15" />
+                                          <Text fx:id="a15" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="15" />
+                                          <Text fx:id="duration15" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                                          <Text fx:id="lobby16" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="16" />
+                                          <Text fx:id="win16" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                                          <Text fx:id="k16" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="16" />
+                                          <Text fx:id="d16" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="16" />
+                                          <Text fx:id="a16" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="16" />
+                                          <Text fx:id="duration16" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+                                          <Text fx:id="lobby17" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="17" />
+                                          <Text fx:id="win17" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+                                          <Text fx:id="k17" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="17" />
+                                          <Text fx:id="d17" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="17" />
+                                          <Text fx:id="a17" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="17" />
+                                          <Text fx:id="duration17" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+                                          <Text fx:id="lobby18" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="18" />
+                                          <Text fx:id="win18" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+                                          <Text fx:id="k18" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="18" />
+                                          <Text fx:id="d18" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="18" />
+                                          <Text fx:id="a18" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="18" />
+                                          <Text fx:id="duration18" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+                                          <Text fx:id="lobby19" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="19" />
+                                          <Text fx:id="win19" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+                                          <Text fx:id="k19" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="19" />
+                                          <Text fx:id="d19" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="19" />
+                                          <Text fx:id="a19" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="19" />
+                                          <Text fx:id="duration19" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="19" />
+                                          <Text fx:id="lobby20" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="20" />
+                                          <Text fx:id="win20" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+                                          <Text fx:id="k20" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="20" />
+                                          <Text fx:id="d20" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="20" />
+                                          <Text fx:id="a20" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="20" />
+                                          <Text fx:id="duration20" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="20" />
+                                          <Text fx:id="lobby21" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="21" />
+                                          <Text fx:id="win21" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="21" />
+                                          <Text fx:id="k21" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="21" />
+                                          <Text fx:id="d21" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="21" />
+                                          <Text fx:id="a21" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="21" />
+                                          <Text fx:id="duration21" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="21" />
+                                          <Text fx:id="lobby22" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="22" />
+                                          <Text fx:id="win22" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="22" />
+                                          <Text fx:id="k22" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="22" />
+                                          <Text fx:id="d22" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="22" />
+                                          <Text fx:id="a22" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="22" />
+                                          <Text fx:id="duration22" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="22" />
+                                          <Text fx:id="lobby23" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="23" />
+                                          <Text fx:id="win23" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="23" />
+                                          <Text fx:id="k23" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="23" />
+                                          <Text fx:id="d23" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="23" />
+                                          <Text fx:id="a23" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="23" />
+                                          <Text fx:id="duration23" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="23" />
+                                          <Text fx:id="lobby24" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.5244140625" GridPane.rowIndex="24" />
+                                          <Text fx:id="win24" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="24" />
+                                          <Text fx:id="k24" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="24" />
+                                          <Text fx:id="d24" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="24" />
+                                          <Text fx:id="a24" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="24" />
+                                          <Text fx:id="duration24" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="24" />
                                           <ImageView fx:id="image0" fitHeight="34.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="0" />
                                           <ImageView fx:id="image1" fitHeight="34.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                                           <ImageView fx:id="image2" fitHeight="34.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
@@ -367,9 +376,9 @@
                                           <Button fx:id="back" mnemonicParsing="false" text="Назад" GridPane.rowIndex="25" />
                                        </children>
                                        <columnConstraints>
-                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="135.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="61.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="135.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="61.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="81.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="46.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="46.0" />
@@ -426,13 +435,17 @@
          <right>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="59.0" layoutY="455.0" mnemonicParsing="false" onAction="#newPlayer" prefHeight="32.0" prefWidth="135.0" text="Другой игрок" AnchorPane.bottomAnchor="167.0" AnchorPane.rightAnchor="10.0" />
-                  <TextField fx:id="newPlayer" layoutX="7.0" layoutY="411.0" prefHeight="31.0" prefWidth="167.0" AnchorPane.bottomAnchor="200.0" AnchorPane.rightAnchor="10.0" />
+                  <Button layoutX="59.0" layoutY="455.0" mnemonicParsing="false" onAction="#newPlayer" prefHeight="25.0" prefWidth="50.0" text="GO" AnchorPane.bottomAnchor="165.0" AnchorPane.rightAnchor="10.0" />
+                  <TextField fx:id="newPlayer" layoutX="7.0" layoutY="411.0" prefHeight="25.0" prefWidth="165.0" promptText="id игрока" AnchorPane.bottomAnchor="200.0" AnchorPane.rightAnchor="10.0" />
                </children>
             </AnchorPane>
          </right>
          <left>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="TextStyle.css" BorderPane.alignment="CENTER" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="../Style/TextStyle.css" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="idMatch" layoutX="10.0" layoutY="409.0" promptText="id матча" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="10.0" />
+                  <Button layoutX="26.0" layoutY="426.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="50.0" text="GO" AnchorPane.bottomAnchor="165.0" AnchorPane.leftAnchor="10.0" />
+               </children></AnchorPane>
          </left>
          <bottom>
             <AnchorPane prefHeight="46.0" prefWidth="1280.0" BorderPane.alignment="CENTER" />

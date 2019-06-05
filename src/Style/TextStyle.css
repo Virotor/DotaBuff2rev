@@ -1,5 +1,5 @@
 #GridPane{
-    -fx-background-image: url("../HeroesIcon/dota.png");
+    -fx-background-image: url("../HeroesIcon/dotal.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
     -fx-background-position: center center;
@@ -17,7 +17,7 @@
 }
 
 #BorderPane {
-    -fx-background-image: url("../HeroesIcon/name.jpg");
+    -fx-background-image: url("../HeroesIcon/dotal.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
     -fx-background-position: center center;
@@ -30,20 +30,20 @@
 }
 
 #AnchorPane {
-    -fx-background-image: url("../HeroesIcon/24587.jpg");
+  /*  -fx-background-image: url("../HeroesIcon/24587.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
-    -fx-background-position: center center;
+    -fx-background-position: center center;*/
 }
 #Radiant {
-    -fx-background-image: url("../HeroesIcon/dota2.jpg");
+    -fx-background-image: url("../HeroesIcon/radiant.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
     -fx-background-position: center ;
 }
 
 #Dire {
-    -fx-background-image: url("../HeroesIcon/,.,.jpg");
+    -fx-background-image: url("../HeroesIcon/dire.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
     -fx-background-position: center center;

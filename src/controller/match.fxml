@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="BorderPane" prefHeight="540.0" prefWidth="960.0" stylesheets="TextStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMatch">
+<AnchorPane id="BorderPane" prefHeight="540.0" prefWidth="960.0" stylesheets="../Style/TextStyle.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMatch">
     <children>
-        <HBox alignment="CENTER_LEFT" layoutX="64.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <Button ellipsisString="" mnemonicParsing="false" onAction="#goBack" text="Назад">
-                    <HBox.margin>
-                        <Insets left="10.0" />
-                    </HBox.margin>
-                </Button>
-            </children>
-        </HBox>
-      <AnchorPane id="GridPane" layoutX="10.0" layoutY="40.0" stylesheets="TextStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+        <HBox alignment="CENTER_LEFT" layoutX="64.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane id="GridPane" layoutX="10.0" layoutY="37.0" prefHeight="493.0" prefWidth="950.0" stylesheets="@../Style/TextStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
          <children>
-            <BorderPane id="GridPane" stylesheets="TextStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <BorderPane id="GridPane" layoutY="-32.0" prefHeight="522.0" prefWidth="950.0" stylesheets="../Style/TextStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-32.0">
                <center>
-                    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pickOnBounds="false" prefHeight="348.0" prefWidth="622.0" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+                    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pickOnBounds="false" prefHeight="519.0" prefWidth="950.0" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
                         <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2048.0" prefWidth="931.0">
                                 <children>
-                              <HBox stylesheets="TextStyle.css" id="AnchorPane" alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <HBox id="AnchorPane" alignment="CENTER" stylesheets="@../Style/TextStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                          <VBox stylesheets="TextStyle.css" id="AnchorPane" alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefHeight="344.0" prefWidth="937.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefHeight="2072.0" prefWidth="939.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                               <children>
                                                   <Text fill="#10e54d" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Radiant" textAlignment="CENTER" wrappingWidth="909.14208984375">
                                                       <font>
@@ -40,7 +39,7 @@
                                                           <Insets left="10.0" />
                                                       </VBox.margin>
                                                   </Text>
-                                                  <GridPane stylesheets="TextStyle.css" id="Radiant" maxWidth="894.0" prefHeight="150.0" prefWidth="894.0">
+                                                  <GridPane id="Radiant" maxWidth="894.0" prefHeight="150.0" prefWidth="894.0" stylesheets="@../Style/TextStyle.css">
                                                       <columnConstraints>
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="50.0" />
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="360.0" />
@@ -55,7 +54,7 @@
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="40.0" />
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="40.0" />
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="40.0" />
-                                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
                                                       </columnConstraints>
                                                       <rowConstraints>
                                                 <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
@@ -211,375 +210,393 @@
                                                               </GridPane.margin>
                                                           </ImageView>
                                                           <ImageView fx:id="image2" fitHeight="25.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
-                                                          <Text fx:id="g0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                          <Text fx:id="g0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="1" fx:id="x0">
+                                                          <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="1" fx:id="x0">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                                          <Text fx:id="k0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                                          <Text fx:id="d0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                                          <Text fx:id="a0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                                          <Text fx:id="w0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                                                          <Text fx:id="h0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                                                          <Text fx:id="den0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                                                          <Text fx:id="dam0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="1">
+                                                          <Text fx:id="heal0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="1">
+                                                          <Text fx:id="l0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="g1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                          <Text fx:id="g1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="x1">
+                                                          <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="x1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                                          <Text fx:id="k1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                                          <Text fx:id="d1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                                          <Text fx:id="a1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                                          <Text fx:id="w1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                                                          <Text fx:id="h1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                                                          <Text fx:id="den1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="2">
+                                                          <Text fx:id="dam1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="2">
+                                                          <Text fx:id="heal1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="2">
+                                                          <Text fx:id="l1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="g2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                          <Text fx:id="g2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="g3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                          <Text fx:id="g3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="g4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                          <Text fx:id="g4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="3" fx:id="x2">
+                                                          <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="3" fx:id="x2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="4" fx:id="x3">
+                                                          <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="4" fx:id="x3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="5" fx:id="x4">
+                                                          <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="5" fx:id="x4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                                          <Text fx:id="k2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                                          <Text fx:id="k3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                                          <Text fx:id="k4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                                          <Text fx:id="d2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                                          <Text fx:id="d3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                                          <Text fx:id="d4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                                          <Text fx:id="a2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                                                          <Text fx:id="a3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                                                          <Text fx:id="a4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                                                          <Text fx:id="w2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                                          <Text fx:id="w3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                                          <Text fx:id="w4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                                                          <Text fx:id="h2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                                                          <Text fx:id="h3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                                                          <Text fx:id="h4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="3">
+                                                          <Text fx:id="den2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="4">
+                                                          <Text fx:id="den3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="5">
+                                                          <Text fx:id="den4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="3">
+                                                          <Text fx:id="dam2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="4">
+                                                          <Text fx:id="dam3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="5">
+                                                          <Text fx:id="dam4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="3">
+                                                          <Text fx:id="heal2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="4">
+                                                          <Text fx:id="heal3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="5">
+                                                          <Text fx:id="heal4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="3">
+                                                          <Text fx:id="l2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="4">
+                                                          <Text fx:id="l3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="5">
+                                                          <Text fx:id="l4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="name0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="1">
+                                                          <Text fx:id="name0" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                          <Text fx:id="name1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="2">
+                                                          <Text fx:id="name1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                          <Text fx:id="name2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="3">
+                                                          <Text fx:id="name2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                          <Text fx:id="name3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="4">
+                                                          <Text fx:id="name3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                          <Text fx:id="name4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="5">
+                                                          <Text fx:id="name4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Герой" wrappingWidth="44.6708984375">
+                                                        <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Герой" wrappingWidth="44.6708984375">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Инвентарь" GridPane.columnIndex="1">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Инвентарь" GridPane.columnIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GPM" GridPane.columnIndex="2">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="GPM" GridPane.columnIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="XPM" GridPane.columnIndex="3">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="XPM" GridPane.columnIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="У" GridPane.columnIndex="4">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="У" GridPane.columnIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="С" GridPane.columnIndex="5">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="С" GridPane.columnIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="П" GridPane.columnIndex="6">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="П" GridPane.columnIndex="6">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ОЦ" GridPane.columnIndex="7">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="ОЦ" GridPane.columnIndex="7">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Д" GridPane.columnIndex="8">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Д" GridPane.columnIndex="8">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="НО" GridPane.columnIndex="9">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="НО" GridPane.columnIndex="9">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Леч" GridPane.columnIndex="10">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Урон" GridPane.columnIndex="10">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Урон" GridPane.columnIndex="11">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Леч" GridPane.columnIndex="11">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lvl" GridPane.columnIndex="12">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Lvl" GridPane.columnIndex="12">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Имя игрока" GridPane.columnIndex="13">
+                                                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя игрока" GridPane.columnIndex="13">
                                                    <font>
                                                       <Font name="Times New Roman" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
                                                       </children>
                                                   </GridPane>
@@ -591,7 +608,7 @@
                                                           <Insets left="10.0" />
                                                       </VBox.margin>
                                                   </Text>
-                                                  <GridPane stylesheets="TextStyle.css" id="Dire" layoutX="20.0" layoutY="43.0" maxWidth="899.0" prefHeight="150.0" prefWidth="899.0">
+                                                  <GridPane id="Dire" layoutX="20.0" layoutY="43.0" maxWidth="899.0" prefHeight="150.0" prefWidth="899.0" styleClass="TextStyle" stylesheets="../Style/TextStyle.css">
                                                       <columnConstraints>
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="50.0" />
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="360.0" />
@@ -606,7 +623,7 @@
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="40.0" />
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="40.0" />
                                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="40.0" />
-                                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
                                                       </columnConstraints>
                                                       <rowConstraints>
                                                 <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -759,379 +776,397 @@
                                                               </GridPane.margin>
                                                           </ImageView>
                                                           <ImageView fx:id="image7" fitHeight="25.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
-                                                          <Text fx:id="g5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                          <Text fx:id="g5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="1" fx:id="x5">
+                                                          <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="1" fx:id="x5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                                          <Text fx:id="k5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                                          <Text fx:id="d5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                                          <Text fx:id="a5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                                          <Text fx:id="w5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                                                          <Text fx:id="h5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                                                          <Text fx:id="den5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                                                          <Text fx:id="dam5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="1">
+                                                          <Text fx:id="heal5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="1">
+                                                          <Text fx:id="l5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="g6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                          <Text fx:id="g6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="x6">
+                                                          <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="x6">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                                          <Text fx:id="k6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                                          <Text fx:id="d6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                                          <Text fx:id="a6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                                          <Text fx:id="w6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                                                          <Text fx:id="h6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                                                          <Text fx:id="den6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="2">
+                                                          <Text fx:id="dam6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="2">
+                                                          <Text fx:id="heal6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="2">
+                                                          <Text fx:id="l6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="g7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                          <Text fx:id="g7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="g8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                          <Text fx:id="g8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="g9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                          <Text fx:id="g9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="3" fx:id="x7">
+                                                          <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="3" fx:id="x7">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="4" fx:id="x8">
+                                                          <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="4" fx:id="x8">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="5" fx:id="x9">
+                                                          <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="5" fx:id="x9">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                                          <Text fx:id="k7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                                          <Text fx:id="k8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="k9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                                          <Text fx:id="k9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                                          <Text fx:id="d7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                                          <Text fx:id="d8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="d9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                                          <Text fx:id="d9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                                          <Text fx:id="a7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                                                          <Text fx:id="a8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                                                          <Text fx:id="a9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                                                          <Text fx:id="w7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                                          <Text fx:id="w8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="w9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                                          <Text fx:id="w9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="7" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                                                          <Text fx:id="h7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                                                          <Text fx:id="h8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="h9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                                                          <Text fx:id="h9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="8" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="3">
+                                                          <Text fx:id="den7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="4">
+                                                          <Text fx:id="den8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="den9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="5">
+                                                          <Text fx:id="den9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="9" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="3">
+                                                          <Text fx:id="dam7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="4">
+                                                          <Text fx:id="dam8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="dam9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="5">
+                                                          <Text fx:id="dam9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="10" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="3">
+                                                          <Text fx:id="heal7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="4">
+                                                          <Text fx:id="heal8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="heal9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="5">
+                                                          <Text fx:id="heal9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="11" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="3">
+                                                          <Text fx:id="l7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="4">
+                                                          <Text fx:id="l8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="l9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="5">
+                                                          <Text fx:id="l9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="12" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                          <Text fx:id="name5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="1">
+                                                          <Text fx:id="name5" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                          <Text fx:id="name6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="2">
+                                                          <Text fx:id="name6" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                          <Text fx:id="name7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="3">
+                                                          <Text fx:id="name7" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                          <Text fx:id="name8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="4">
+                                                          <Text fx:id="name8" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                          <Text fx:id="name9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="5">
+                                                          <Text fx:id="name9" fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="13" GridPane.rowIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Герой" wrappingWidth="44.6708984375">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Герой" wrappingWidth="44.6708984375">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Инвентарь" GridPane.columnIndex="1">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Инвентарь" GridPane.columnIndex="1">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GPM" GridPane.columnIndex="2">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="GPM" GridPane.columnIndex="2">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="XPM" GridPane.columnIndex="3">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="XPM" GridPane.columnIndex="3">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="У" GridPane.columnIndex="4">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="У" GridPane.columnIndex="4">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="С" GridPane.columnIndex="5">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="С" GridPane.columnIndex="5">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="П" GridPane.columnIndex="6">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="П" GridPane.columnIndex="6">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ОЦ" GridPane.columnIndex="7">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="ОЦ" GridPane.columnIndex="7">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="НО" GridPane.columnIndex="9">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="НО" GridPane.columnIndex="9">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Леч" GridPane.columnIndex="10">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Урон" GridPane.columnIndex="10">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Урон" GridPane.columnIndex="11">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Леч" GridPane.columnIndex="11">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Д" GridPane.columnIndex="8">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Д" GridPane.columnIndex="8">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lvl" GridPane.columnIndex="12">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Lvl" GridPane.columnIndex="12">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Имя игрока" GridPane.columnIndex="13">
+                                                <Text fill="#0062ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя игрока" GridPane.columnIndex="13">
                                                    <font>
                                                       <Font name="Times New Roman Italic" size="15.0" />
                                                    </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </GridPane.margin>
                                                 </Text>
                                                       </children>
                                                   </GridPane>
-                                                  <LineChart fx:id="GraphicAdvantage" horizontalGridLinesVisible="false" prefHeight="550.0" prefWidth="916.0" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                                  <LineChart fx:id="GraphicAdvantage" horizontalGridLinesVisible="false" prefHeight="550.0" prefWidth="916.0" title="График преимущества" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
                                                       <xAxis>
                                                           <NumberAxis side="BOTTOM" />
                                                       </xAxis>
@@ -1145,7 +1180,7 @@
                                                           <Insets right="15.0" />
                                                       </VBox.margin>
                                                   </LineChart>
-                                                  <LineChart fx:id="GraphicExp" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" prefHeight="550.0" prefWidth="916.0" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                                  <LineChart fx:id="GraphicExp" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" prefHeight="550.0" prefWidth="916.0" title="График изменения золота" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
                                                       <xAxis>
                                                           <NumberAxis side="BOTTOM" tickLength="0.0" tickMarkVisible="false" />
                                                       </xAxis>
@@ -1156,7 +1191,7 @@
                                                           <Insets right="15.0" />
                                                       </VBox.margin>
                                                   </LineChart>
-                                                  <LineChart fx:id="GraphicGold" horizontalGridLinesVisible="false" prefHeight="550.0" prefWidth="916.0" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                                  <LineChart fx:id="GraphicGold" horizontalGridLinesVisible="false" prefHeight="550.0" prefWidth="916.0" title="График изменения опыта " verticalGridLinesVisible="false" verticalZeroLineVisible="false">
                                                       <xAxis>
                                                           <NumberAxis side="BOTTOM" />
                                                       </xAxis>

@@ -11,7 +11,7 @@ import java.net.Socket;
 
 public class Client {
    static private  final int port = 7777;
-  static   private  final String addres = "100.91.99.251";
+  static   private  final String addres ="192.168.43.227";
     private  Socket socket;
     private  DataOutputStream os;
     private  DataInputStream is;
@@ -40,8 +40,9 @@ public class Client {
     }
 
 
-    public PlayerStatistics playerStatisticsAndMatches(String id) throws IOException {
+    public void playerStatisticsAndMatches(String id) throws IOException {
         try {
+            playerStatistics = new PlayerStatistics();
             InetAddress ip = InetAddress.getByName(addres);
             socket = new Socket(ip, port);
             ObjectOutputStream serializer = new ObjectOutputStream(socket.getOutputStream());
@@ -63,11 +64,11 @@ public class Client {
             throw new IOException("Не удалось установить интернет соединение");
 
         }
-        return playerStatistics;
     }
 
     public  void playerMatchStatistics(String id) throws IOException {
         InetAddress ip = InetAddress.getByName(addres);
+        playerMatchStatistics = new PlayerMatchStatistics[10];
         try {
             socket = new Socket(ip, port);
             ObjectOutputStream serializer = new ObjectOutputStream(socket.getOutputStream());

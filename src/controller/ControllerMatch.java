@@ -112,14 +112,14 @@ public class ControllerMatch {
                 image.setImage(im);
             }
         }
-       /* for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             for (int j = 6; j < 9; j++) {
             File file = new File(path + ItemId.valueOf("i" + playerMatchStatistics[i].getBackPack().get(j - 6).toString()).toString() + ".jpg");
             Image im = new Image(file.toURI().toString());
             ImageView image = (ImageView) namespace.get("item" + i + j);
             image.setImage(im);
         }
-    }*/
+    }
     }
 
     private void assistText(Map<String, Object> namespace, PlayerMatchStatistics[] playerMatchStatistics) {
@@ -217,6 +217,9 @@ public class ControllerMatch {
                 GraphicGold.setTitle("График золота");
             }
         }
+        else {
+            GraphicGold.setTitle("Недоступно");
+        }
     }
 
     private void graphicChangeExpView(PlayerMatchStatistics[] playerMatchStatistics) {
@@ -232,7 +235,9 @@ public class ControllerMatch {
                 series.setName(HeroId.valueOf("h" + playerMatchStatistics[i].getHero_id().toString()).toString());
                 GraphicExp.getData().add(series);
             }
-        } else System.out.println("Empty");
+        }  else {
+            GraphicExp.setTitle("Недоступно");
+        }
     }
 
     private void graphicAdvantage(DataForGraphs dataForGraphs) {
@@ -244,6 +249,10 @@ public class ControllerMatch {
             for (int i = 0; i < dataForGraphs.getNetWorse().size(); i++) {
                 dataExp.add(new XYChart.Data(i, dataForGraphs.getExp().get(i)));
                 dataGold.add(new XYChart.Data(i, dataForGraphs.getNetWorse().get(i)));
+                Tooltip.install(dataExp.get(i).getNode(),
+                        new Tooltip('(' + dataExp.get(i).getXValue().toString() + ';' + dataExp.get(i).getYValue().toString() + ')'));
+                Tooltip.install(dataGold.get(i).getNode(),
+                        new Tooltip('(' + dataGold.get(i).getXValue().toString() + ';' + dataGold.get(i).getYValue().toString() + ')'));
             }
             seriesExp.setData(dataExp);
             seriesGold.setData(dataGold);
@@ -259,6 +268,9 @@ public class ControllerMatch {
                         new Tooltip('(' + dataGold.get(i).getXValue().toString() + ';' + dataGold.get(i).getYValue().toString() + ')'));
             }
         }
+        else {
+            GraphicAdvantage.setTitle("Недоступно");
+        }
     }
 
     private void imageSet(Map<String, Object> namespace, PlayerMatchStatistics[] playerMatchStatistics, DataForGraphs dataForGraphs) {
@@ -270,7 +282,7 @@ public class ControllerMatch {
             int finali = i;
             image.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
                 try {
-                    this.ClickOnHero(HeroId.valueOf("h" + playerMatchStatistics[finali].getHero_id()).toString());
+                    this.ClickOnHero(playerMatchStatistics[finali].getHero_id().toString());
                     ModelCancel.setCodeOfOperation(3);
                     ModelCancel.setPlayerMatchStatisticsStack(playerMatchStatistics);
                     ModelCancel.setDataForGraphsStack(dataForGraphs);
